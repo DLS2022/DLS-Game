@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 284421396}
   - component: {fileID: 284421395}
   - component: {fileID: 284421394}
+  - component: {fileID: 284421399}
   m_Layer: 0
   m_Name: practiceNerd
   m_TagString: Untagged
@@ -330,6 +331,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8338988565591873055}
+--- !u!114 &284421399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284421393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71675a0766902c444b45aa8c6c5fbc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &343429749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1164,7 @@ GameObject:
   - component: {fileID: 819486748}
   - component: {fileID: 819486747}
   - component: {fileID: 819486746}
+  - component: {fileID: 819486751}
   m_Layer: 0
   m_Name: practiceMom
   m_TagString: Untagged
@@ -1249,6 +1263,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8338988565591873055}
+--- !u!114 &819486751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819486745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71675a0766902c444b45aa8c6c5fbc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
