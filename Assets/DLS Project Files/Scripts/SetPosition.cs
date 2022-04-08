@@ -20,6 +20,9 @@ public class SetPosition : MonoBehaviour
     [Tooltip("Character Controller")]
     CharacterController controller;
 
+
+    private bool canInteract;
+
     //bool canInteract;
 
     // Start is called before the first frame update
@@ -39,7 +42,10 @@ public class SetPosition : MonoBehaviour
             controller.enabled = false;
 
             if (controller.transform.position == mainRoomTargetPosition.transform.position)
+            {
                 controller.enabled = true;
+                canInteract = false;
+            }
         }
 
         //Bathroom
@@ -49,21 +55,38 @@ public class SetPosition : MonoBehaviour
             controller.enabled = false;
 
             if (controller.transform.position == bathRoomTargetPosition.transform.position)
+            {
                 controller.enabled = true;
+                canInteract = false;
+            } 
+        }
+
+
+        if (canInteract)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //One Way Doors
+                controller.transform.position = targetPosition.transform.position;
+                controller.enabled = false;
+
+                if (controller.transform.position == targetPosition.transform.position)
+                {
+                    controller.enabled = true;
+                    canInteract = false;
+                }
+            }
         }
 
 
 
     }
 
+
+
     private void OnTriggerEnter(Collider other)
     {
-        //One Way Doors
-        controller.transform.position = targetPosition.transform.position;
-        controller.enabled = false;
-
-        if (controller.transform.position == targetPosition.transform.position)
-            controller.enabled = true;
+        canInteract = true;
     }
 
 }
