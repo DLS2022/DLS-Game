@@ -3,6 +3,8 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+*/[Ll]ogs/
+*/[Mm]emoryCaptures/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
@@ -42,4 +44,5 @@ Logs/shadercompiler-UnityShaderCompiler.exe0.log
 Logs/shadercompiler-AssetImportWorker0.log
 Logs/AssetImportWorker0.log
 Logs/AssetImportWorker0-prev.log
+*.log
 *.log
