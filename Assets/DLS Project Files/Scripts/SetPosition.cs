@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SetPosition : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class SetPosition : MonoBehaviour
     [SerializeField]
     [Tooltip("Character Controller")]
     CharacterController controller;
+
+    [SerializeField]
+    [Tooltip("UI FADE TO BLACK PANEL")]
+    GameObject blackPanel;
 
 
     private bool canInteract;
@@ -66,14 +71,20 @@ public class SetPosition : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                //Screen Fades to black for .5f seconds
+                StartCoroutine(FadeToBlack());
+             
+                
                 //One Way Doors
                 controller.transform.position = targetPosition.transform.position;
-                controller.enabled = false;
+                
 
                 if (controller.transform.position == targetPosition.transform.position)
                 {
-                    controller.enabled = true;
+                    
                     canInteract = false;
+                    
+
                 }
             }
         }
@@ -87,6 +98,22 @@ public class SetPosition : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canInteract = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        canInteract = false;
+    }
+
+
+    //Setting the screen to black when walking through a door
+    IEnumerator FadeToBlack()
+    {
+        blackPanel.SetActive(true);
+        controller.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
+        yield return new WaitForSeconds(.5f);
+        blackPanel.SetActive(false);
+        controller.enabled = true;
     }
 
 }
