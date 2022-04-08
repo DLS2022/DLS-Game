@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     bool canInteract;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (canInteract)
         {
             if (Input.GetKeyDown(KeyCode.Space))
