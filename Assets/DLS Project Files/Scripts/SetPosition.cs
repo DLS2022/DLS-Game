@@ -114,10 +114,10 @@ public class SetPosition : MonoBehaviour
     IEnumerator FadeToBlack()
     {
         blackPanel.SetActive(true);
-        //controller.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
+        controller.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
         yield return new WaitForSeconds(.5f);
         blackPanel.SetActive(false);
-        //controller.enabled = true;
+        controller.enabled = true;
     }
 
 }
