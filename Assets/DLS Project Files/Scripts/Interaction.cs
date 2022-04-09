@@ -14,7 +14,7 @@ public class Interaction : MonoBehaviour
 
     public GameObject player;
     public FirstPersonController fpcscript;
-    public GameObject randoObj;
+    // public GameObject randoObj;
 
     // private bool isCurrentlySpeaking;
     bool canInteract;
@@ -23,7 +23,7 @@ public class Interaction : MonoBehaviour
     {
         diaRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
 
-        diaRunner.AddCommandHandler<GameObject>("endconvo", EndConversation);
+        // diaRunner.AddCommandHandler<GameObject>("endconvo", EndConversation);
     }
 
     // Start is called before the first frame update
@@ -74,11 +74,5 @@ public class Interaction : MonoBehaviour
     private void StartConversation()
     {
         diaRunner.StartDialogue(talktonode);
-    }
-
-    private void EndConversation(GameObject gameobj)
-    {   
-        Debug.Log("here");
-        randoObj.SetActive(true);
     }
 }
