@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using StarterAssets;
 
 public class SetPosition : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class SetPosition : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Character Controller")]
-    CharacterController controller;
+    FirstPersonController controller;
 
     [SerializeField]
     [Tooltip("UI FADE TO BLACK PANEL")]
     GameObject blackPanel;
 
+    GameObject player;
 
     private bool canInteract;
 
@@ -33,7 +35,8 @@ public class SetPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CharacterController controller = GetComponent(typeof(CharacterController)) as CharacterController; 
+        player = GameObject.FindWithTag("Player");
+        controller = player.GetComponent<FirstPersonController>(); 
     }
 
     // Update is called once per frame
