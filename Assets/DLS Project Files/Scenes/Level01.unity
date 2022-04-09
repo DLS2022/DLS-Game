@@ -4466,6 +4466,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1423737354, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: blackPanel
+      value: 
+      objectReference: {fileID: 129263032}
     - target: {fileID: 757993940806030282, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
