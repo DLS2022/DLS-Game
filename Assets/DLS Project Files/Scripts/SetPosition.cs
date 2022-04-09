@@ -20,7 +20,7 @@ public class SetPosition : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Character Controller")]
-    FirstPersonController controller;
+    CharacterController controller;
 
     [SerializeField]
     [Tooltip("UI FADE TO BLACK PANEL")]
@@ -35,8 +35,9 @@ public class SetPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        controller = player.GetComponent<FirstPersonController>(); 
+        /*player = GameObject.FindWithTag("Player");
+        controller = player.GetComponent<FirstPersonController>(); */
+        controller = FindObjectOfType<CharacterController>() as CharacterController;
     }
 
     // Update is called once per frame
@@ -80,14 +81,14 @@ public class SetPosition : MonoBehaviour
                 
                 //One Way Doors
                 controller.transform.position = targetPosition.transform.position;
-                
+                controller.enabled = false;
+
 
                 if (controller.transform.position == targetPosition.transform.position)
                 {
                     
                     canInteract = false;
-                    
-
+                    controller.enabled = true;
                 }
             }
         }
@@ -113,10 +114,10 @@ public class SetPosition : MonoBehaviour
     IEnumerator FadeToBlack()
     {
         blackPanel.SetActive(true);
-        controller.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
+        //controller.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
         yield return new WaitForSeconds(.5f);
         blackPanel.SetActive(false);
-        controller.enabled = true;
+        //controller.enabled = true;
     }
 
 }
