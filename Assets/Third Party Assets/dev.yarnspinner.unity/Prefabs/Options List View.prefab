@@ -153,6 +153,7 @@ MonoBehaviour:
   optionViewPrefab: {fileID: 5665317717604146022, guid: 3ff4e0d87ab7d4789a1565ac303e8261, type: 3}
   lastLineText: {fileID: 6323935188436132823}
   fadeTime: 0.1
+  showUnavailableOptions: 0
 --- !u!114 &6323935187928403897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,15 +273,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Last line
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5eb58fc3230ab3d4ca4ff0fc507667eb, type: 2}
+  m_sharedMaterial: {fileID: -611326909480652682, guid: 5eb58fc3230ab3d4ca4ff0fc507667eb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290460671
+  m_fontColor: {r: 1, g: 0.23137255, b: 0.73333335, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
