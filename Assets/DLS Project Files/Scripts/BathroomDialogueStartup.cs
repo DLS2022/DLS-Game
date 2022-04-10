@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 using StarterAssets;
+using UnityEngine.SceneManagement;
 
-public class Interaction : MonoBehaviour
+public class BathroomDialogueStartup : MonoBehaviour
 {
 
     [Header("Yarn Components")]
@@ -13,38 +14,25 @@ public class Interaction : MonoBehaviour
 
     public GameObject player;
     public FirstPersonController fpcscript;
-    // public GameObject randoObj;
 
-    // private bool isCurrentlySpeaking;
-    bool canInteract;
-
+    // Start is called before the first frame update
     void Awake()
     {
         diaRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-
-        // diaRunner.AddCommandHandler<GameObject>("endconvo", EndConversation);
+        diaRunner.startNode = GlobalVariables.AutoNode;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         fpcscript = player.GetComponent<FirstPersonController>();
+        // StartBathroomDialogue();
+        // Debug.Log(diaRunner.CurrentNodeName);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canInteract)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && !diaRunner.IsDialogueRunning)
-            {
-                //Player Dialogue can be activated
-                Debug.Log("You hit the trigger");
-                StartConversation();
-            } 
-        }
-
         if(diaRunner.IsDialogueRunning)
         {
             fpcscript.enabled = false;
@@ -58,20 +46,26 @@ public class Interaction : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
+
+        TesterControls();
+        
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        canInteract = true;
-    }
+    // public void StartBathroomDialogue()
+    // {
+    //     diaRunner.StartDialogue(talktonode);
+    // }
 
-    private void OnTriggerExit(Collider other)
+    public void TesterControls()
     {
-        canInteract = false;
-    }
+        if(Input.GetKeyDown(KeyCode.F1))
+        {
+            GlobalVariables.AutoNode = "DummyDialogue";
+        }
 
-    private void StartConversation()
-    {
-        diaRunner.StartDialogue(talktonode);
+        if(Input.GetKeyDown(KeyCode.F2))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }

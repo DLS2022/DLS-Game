@@ -1,28 +1,37 @@
-﻿title: Start
----
-
-===
-
-title: JockFirst
+﻿title: JockFirst
 tags:
 ---
-Player: Hey… Uh, how are you liking the party? 
+Player: Hey… Uh, how are you liking the party?
 Jock: Dude, I’ve been raging since Thursday and I’ll keep goin until the booze dries up… or I do! 
 Player: So… you’re still having fun? Or does the energy plummet after the third time?
 Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this new drink I’ve created. I call it the Sugar Blast! It’s two shots of tequila, a handful of skittles, whipped cream and… some other stuff I think. 
--> That sounds disgusting! 
-    You're no fun.
--> I think I'll stick to water for now. 
-    For sure, gotta pace yourself. 
--> Sure, I'll at least try a sip. 
-    Fuck yeah! Let's party. 
-    So whatcha think? Want me to make another? 
-    -> I think if I have one more, I might go into a coma. 
-        For sure, gotta pace yourself. 
-    -> Uhh, sure... Keep 'em coming. 
-        You okay? Your face is turning a line-skittle color. 
-        I don't feel so good. I'm gonna walk home. 
-        Oh, uh, alright dude. 
+-> Player: That sounds disgusting! 
+    Jock: You're no fun.
+-> Player: I think I'll stick to water for now. 
+    Jock: For sure, gotta pace yourself.
+    Jock: So how are you enjoying the party?
+    -> Player: I'm a bit anxious.
+        Jock: Damn, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
+        ->Player: Not really...
+            Jock: Oh, sorry...
+        ->Player: Being away from people in a quiet place.
+            Jock: Oh, I can leave you alone if you want...
+        ->Player: Music helps me calm down.
+            Jock: Me too! It helps to sing what I’m feeling. I’m pretty fucking drunk!
+            Player: This song slaps!
+            Jock: Yeah! It’s got a good beat!
+            Player: I’ve been trying to figure out what it’s called.
+            Jock: Hmm, I don’t know the name, but at some point it goes: somethin’, somethin’ (insert word from song here). Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+    -> Player: It's alright...
+-> Player: Sure, I'll at least try a sip. 
+    Jock: Fuck yeah! Let's party. 
+    Jock: So whatcha think? Want me to make another? 
+    -> Player: I think if I have one more, I might go into a coma. 
+        Jock: For sure, gotta pace yourself. 
+    -> Player: Uhh, sure... Keep 'em coming. 
+        Jock: You okay? Your face is turning a line-skittle color. 
+        Player: I don't feel so good. I'm gonna walk home. 
+        Jock: Oh, uh, alright dude. 
 ===
 
 title: MomFirst
@@ -31,4 +40,37 @@ dkjfhdfhjadfh
 flajkhflkh
 fhjfh
 s
+===
+
+title: BathroomFirst
+---
+<i> You’re fine, you’re fine. 
+<i> You just gotta get out of the bathroom… How long have you been in the bathroom? 
+<i> Your phone tells you it’s eleven. 
+<i> You’ve been in there for fifteen minutes. They probably think you’re yacking. 
+<i> Is that better or worse than people knowing that you’re pacing? 
+<i> Can they hear the sound each sticky shoe leaves as it fights against old beer and traces of mud?
+
+“Hey! I really need to piss and I think someone’s taking a shower in the other bathroom! Could you hurry it up in there?”
+
+<i> Who the fuck takes a shower at a party?
+<i> Alright.
+<i> One more deep breath.
+<i> That didn’t help. But the slight thump of the music on the other side of the door does. 
+<i> Something about the way your heart is slowing down slightly to align with the bass… 
+<i> Focus on the music. 
+<i> Just breathe and focus on the music. 
+<i> Everything else will fall into place as long as you have that song…
+===
+
+title: BathroomSecond
+---
+adsjklfhasdklfhj
+flajhsdfal
+flk
+===
+
+title: DummyDialogue
+---
+
 ===
