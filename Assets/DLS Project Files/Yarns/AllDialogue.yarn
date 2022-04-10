@@ -6,11 +6,10 @@
 title: JockFirst
 tags:
 ---
-Hey… Uh, how are you liking the party? 
-Dude, I’ve been raging since Thursday and I’ll keep goin until the booze dries up… or I do! 
-So… you’re still having fun? Or does the energy plummet after the third time?
-<<endconvo gameObject>>
-Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this new drink I’ve created. I call it the Sugar Blast! It’s two shots of tequila, a handful of skittles, whipped cream and… some other stuff I think. 
+Player: Hey… Uh, how are you liking the party? 
+Jock: Dude, I’ve been raging since Thursday and I’ll keep goin until the booze dries up… or I do! 
+Player: So… you’re still having fun? Or does the energy plummet after the third time?
+Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this new drink I’ve created. I call it the Sugar Blast! It’s two shots of tequila, a handful of skittles, whipped cream and… some other stuff I think. 
 -> That sounds disgusting! 
     You're no fun.
 -> I think I'll stick to water for now. 
