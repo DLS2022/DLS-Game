@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 using StarterAssets;
+using TMPro;
 
 public class Interaction : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     [Tooltip("Spacebar Image for the Interaction propmt")]
     GameObject spaceBarImage;
+
+    [SerializeField]
+    [Tooltip("This is the text for game objects name to be displayed")]
+    TextMeshProUGUI roomText;
 
     public DialogueRunner diaRunner;
 
@@ -52,7 +57,7 @@ public class Interaction : MonoBehaviour
                 spaceBarImage.SetActive(false);
 
                 //Player Dialogue can be activated
-                Debug.Log("You hit the trigger");
+                //Debug.Log("You hit the trigger");
                 StartConversation();
                 
             } 
