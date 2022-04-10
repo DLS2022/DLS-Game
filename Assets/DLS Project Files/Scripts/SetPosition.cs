@@ -78,7 +78,7 @@ public class SetPosition : MonoBehaviour
 
         if (canInteract)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && this.gameObject.tag != ("BathroomDoor") && this.gameObject.tag != ("OutsideDoor"))
+            if (Input.GetKeyDown(KeyCode.Space) && this.gameObject.tag != ("OutsideDoor"))
             {
                 spaceBarImage.SetActive(false);
 

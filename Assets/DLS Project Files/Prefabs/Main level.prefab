@@ -9900,7 +9900,6 @@ GameObject:
   - component: {fileID: 7955586471862860731}
   - component: {fileID: 7955586471862860730}
   - component: {fileID: 7955586471862860729}
-  - component: {fileID: 7955586471862860728}
   - component: {fileID: 983247124}
   m_Layer: 0
   m_Name: Cube.007 (2)
@@ -9999,24 +9998,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.019690948, y: 0.052979175, z: 0.018633282}
   m_Center: {x: 0.000035460103, y: -0.0167498, z: 0.00019662356}
---- !u!114 &7955586471862860728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7955586471862860726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea073d89106309459d3c8b99b1c2bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bathRoomTargetPosition: {fileID: 7955586472319222076}
-  mainRoomTargetPosition: {fileID: 7955586471674017349}
-  targetPosition: {fileID: 7955586472319222076}
-  controller: {fileID: 0}
-  blackPanel: {fileID: 0}
-  spaceBarImage: {fileID: 0}
 --- !u!114 &983247124
 MonoBehaviour:
   m_ObjectHideFlags: 0
