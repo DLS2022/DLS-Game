@@ -31,10 +31,6 @@ public class SetPosition : MonoBehaviour
     [Tooltip("Spacebar Image for the Interaction propmt")]
     GameObject spaceBarImage;
 
-    [SerializeField]
-    [Tooltip("Door Open SFX")]
-    AudioSource doorOpen;
-
     GameObject player;
 
     private bool canInteract;
@@ -84,8 +80,6 @@ public class SetPosition : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && this.gameObject.tag != ("OutsideDoor"))
             {
-                // Do
-                doorOpen.Play();
 
                 spaceBarImage.SetActive(false);
                 
