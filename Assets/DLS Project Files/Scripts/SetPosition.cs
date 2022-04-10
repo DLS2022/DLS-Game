@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using StarterAssets;
+using UnityEngine.SceneManagement;
 
 public class SetPosition : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class SetPosition : MonoBehaviour
     [Tooltip("UI FADE TO BLACK PANEL")]
     GameObject blackPanel;
 
+    [SerializeField]
+    [Tooltip("Spacebar Image for the Interaction propmt")]
+    GameObject spaceBarImage;
+
     GameObject player;
 
     private bool canInteract;
@@ -45,7 +50,7 @@ public class SetPosition : MonoBehaviour
     {
         //Testing Out System
         //Main Room
-        if (Input.GetKeyDown(KeyCode.E))
+       /* if (Input.GetKeyDown(KeyCode.E))
         {
             controller.transform.position = mainRoomTargetPosition.transform.position;
             controller.enabled = false;
@@ -68,13 +73,15 @@ public class SetPosition : MonoBehaviour
                 controller.enabled = true;
                 canInteract = false;
             } 
-        }
+        }*/
 
 
         if (canInteract)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && this.gameObject.tag != ("BathroomDoor") && this.gameObject.tag != ("OutsideDoor"))
             {
+                spaceBarImage.SetActive(false);
+
                 //Screen Fades to black for .5f seconds
                 StartCoroutine(FadeToBlack());
              
@@ -91,6 +98,12 @@ public class SetPosition : MonoBehaviour
                     controller.enabled = true;
                 }
             }
+
+            else if (Input.GetKeyDown(KeyCode.Space) && this.gameObject.tag == ("OutsideDoor"))
+            {
+                StartCoroutine(FadeToBlack());
+                SceneManager.LoadScene(1);
+            }
         }
 
 
@@ -102,11 +115,14 @@ public class SetPosition : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canInteract = true;
+        spaceBarImage.SetActive(true);
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         canInteract = false;
+        spaceBarImage.SetActive(false);
     }
 
 

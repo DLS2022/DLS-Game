@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 1085923212710314422}
   m_Layer: 0
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: OutsideDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1008,6 +1008,7 @@ MonoBehaviour:
   targetPosition: {fileID: 7955586472319222076}
   controller: {fileID: 0}
   blackPanel: {fileID: 0}
+  spaceBarImage: {fileID: 0}
 --- !u!1 &1085923212871037070
 GameObject:
   m_ObjectHideFlags: 0
@@ -6764,6 +6765,7 @@ MonoBehaviour:
   targetPosition: {fileID: 7955586471674017349}
   controller: {fileID: 0}
   blackPanel: {fileID: 0}
+  spaceBarImage: {fileID: 0}
 --- !u!1 &7955586470709221143
 GameObject:
   m_ObjectHideFlags: 0
@@ -9899,9 +9901,10 @@ GameObject:
   - component: {fileID: 7955586471862860730}
   - component: {fileID: 7955586471862860729}
   - component: {fileID: 7955586471862860728}
+  - component: {fileID: 983247124}
   m_Layer: 0
   m_Name: Cube.007 (2)
-  m_TagString: Untagged
+  m_TagString: BathroomDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10013,6 +10016,29 @@ MonoBehaviour:
   targetPosition: {fileID: 7955586472319222076}
   controller: {fileID: 0}
   blackPanel: {fileID: 0}
+  spaceBarImage: {fileID: 0}
+--- !u!114 &983247124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7955586471862860726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71675a0766902c444b45aa8c6c5fbc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrConvo: 
+  ConvoFirst: BathroomDoorLocked
+  ConvoLose: 
+  ConvoWin: 
+  ConvoBye: 
+  NPCValue: 0
+  spaceBarImage: {fileID: 0}
+  diaRunner: {fileID: 0}
+  player: {fileID: 0}
+  fpcscript: {fileID: 0}
 --- !u!1 &7955586471862882345
 GameObject:
   m_ObjectHideFlags: 0
@@ -10509,7 +10535,7 @@ GameObject:
   - component: {fileID: 7955586471989070673}
   m_Layer: 0
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: OutsideDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10620,6 +10646,7 @@ MonoBehaviour:
   targetPosition: {fileID: 7955586472319222076}
   controller: {fileID: 0}
   blackPanel: {fileID: 0}
+  spaceBarImage: {fileID: 0}
 --- !u!1 &7955586472019610085
 GameObject:
   m_ObjectHideFlags: 0
@@ -12946,6 +12973,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2809285888211460992, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: NPCValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809285888211460992, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoLose
+      value: PunLose
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809285888211460992, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoFirst
+      value: PunFirst
+      objectReference: {fileID: 0}
     - target: {fileID: 2809285888211461006, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
       propertyPath: player
       value: 
@@ -12954,10 +12993,38 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2152125055658972367}
+    - target: {fileID: 2809285888744616163, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoWin
+      value: MomWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809285888744616163, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: NPCValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809285888744616163, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoLose
+      value: MomLose
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809285888744616163, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoFirst
+      value: MomFirst
+      objectReference: {fileID: 0}
     - target: {fileID: 2809285888869370896, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2152125055658972367}
+    - target: {fileID: 2809285888869370907, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoWin
+      value: JockWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809285888869370907, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoLose
+      value: JockLose
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809285888869370907, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
+      propertyPath: ConvoFirst
+      value: JockFirst
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d61b5ca70150984080a0fbf3b32c04d, type: 3}
 --- !u!4 &8249724284033003272 stripped
@@ -13048,6 +13115,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544606, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: startNode
+      value: BathroomFirst
+      objectReference: {fileID: 0}
     - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -13075,6 +13150,10 @@ PrefabInstance:
     - target: {fileID: 7778558434976753271, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_AnchorMax.y

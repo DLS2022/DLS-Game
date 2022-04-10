@@ -15,6 +15,10 @@ public class Interaction : MonoBehaviour
     public string ConvoBye;
     public int NPCValue;
 
+    [SerializeField]
+    [Tooltip("Spacebar Image for the Interaction propmt")]
+    GameObject spaceBarImage;
+
     public DialogueRunner diaRunner;
 
     public GameObject player;
@@ -45,9 +49,12 @@ public class Interaction : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && !diaRunner.IsDialogueRunning)
             {
+                spaceBarImage.SetActive(false);
+
                 //Player Dialogue can be activated
                 Debug.Log("You hit the trigger");
                 StartConversation();
+                
             } 
         }
 
@@ -82,11 +89,13 @@ public class Interaction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canInteract = true;
+        spaceBarImage.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
         canInteract = false;
+        spaceBarImage.SetActive(false);
     }
 
     private void StartConversation()
