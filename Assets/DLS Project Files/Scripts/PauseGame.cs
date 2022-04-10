@@ -23,10 +23,13 @@ public class PauseGame : MonoBehaviour
 
     bool gameIsPaused;
 
+    Interaction interaction;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        interaction = FindObjectOfType<Interaction>();
         player = GameObject.FindWithTag("Player");
         fpcscript = player.GetComponent<FirstPersonController>();
     }
@@ -34,7 +37,7 @@ public class PauseGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !interaction.diaRunner.IsDialogueRunning)
         {
             
             gameIsPaused = !gameIsPaused;
