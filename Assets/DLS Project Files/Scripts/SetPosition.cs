@@ -80,6 +80,8 @@ public class SetPosition : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && this.gameObject.tag != ("OutsideDoor"))
             {
+                // Do
+                SoundManager.instance.sound.PlayOneShot(SoundManager.instance.doorOpen);
 
                 spaceBarImage.SetActive(false);
                 
