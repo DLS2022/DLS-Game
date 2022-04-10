@@ -28,6 +28,10 @@ public class Interaction : MonoBehaviour
 
     public GameObject player;
     public FirstPersonController fpcscript;
+    public bool RestrictMovement;
+
+
+    PauseGame pause;
     // public GameObject randoObj;
 
     // private bool isCurrentlySpeaking;
@@ -36,8 +40,14 @@ public class Interaction : MonoBehaviour
     void Awake()
     {
         diaRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+        pause = FindObjectOfType<PauseGame>();
 
+        if(GlobalVariables.NPCDialogueValue[NPCValue] == 1)
+        {
+            GlobalVariables.NPCDialogueValue[NPCValue] = 0;
+        }
         // diaRunner.AddCommandHandler<GameObject>("endconvo", EndConversation);
+
     }
 
     // Start is called before the first frame update
@@ -65,13 +75,28 @@ public class Interaction : MonoBehaviour
 
         if(diaRunner.IsDialogueRunning)
         {
+            // fpcscript.enabled = false;
+            // Cursor.visible = true;
+            // Cursor.lockState = CursorLockMode.None;
+            RestrictMovement = true;
+        }
+        else
+        {
+            // Debug.Log("here in update");
+            // fpcscript.enabled = true;
+            // Cursor.visible = false;
+            // Cursor.lockState = CursorLockMode.Locked;
+            RestrictMovement = false;
+        }
+
+        if(RestrictMovement || pause.gameIsPaused)
+        {
             fpcscript.enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         else
         {
-            // Debug.Log("here in update");
             fpcscript.enabled = true;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;

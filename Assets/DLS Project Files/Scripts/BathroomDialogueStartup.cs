@@ -15,6 +15,8 @@ public class BathroomDialogueStartup : MonoBehaviour
     public GameObject player;
     public FirstPersonController fpcscript;
 
+    Interaction interaction;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,6 +35,7 @@ public class BathroomDialogueStartup : MonoBehaviour
 
         diaRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         diaRunner.startNode = GlobalVariables.AutoNode;
+        interaction = FindObjectOfType<Interaction>();
     }
 
     void Start()
@@ -48,16 +51,18 @@ public class BathroomDialogueStartup : MonoBehaviour
     {
         if(diaRunner.IsDialogueRunning)
         {
-            fpcscript.enabled = false;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            // fpcscript.enabled = false;
+            // Cursor.visible = true;
+            // Cursor.lockState = CursorLockMode.None;
+            interaction.RestrictMovement = true;
         }
         else
         {
             // Debug.Log("here in update");
-            fpcscript.enabled = true;
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            // fpcscript.enabled = true;
+            // Cursor.visible = false;
+            // Cursor.lockState = CursorLockMode.Locked;
+            interaction.RestrictMovement = false;
         }
 
         TesterControls();

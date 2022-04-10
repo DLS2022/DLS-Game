@@ -21,7 +21,7 @@ public class PauseGame : MonoBehaviour
     [Tooltip("Drag the Player Object here")]
     GameObject player;
 
-    bool gameIsPaused;
+    public bool gameIsPaused;
 
     Interaction interaction;
 
@@ -37,23 +37,28 @@ public class PauseGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !interaction.diaRunner.IsDialogueRunning)
+        if (Input.GetKeyDown(KeyCode.Escape) 
+            && !interaction.diaRunner.IsDialogueRunning
+            )
         {
-            
             gameIsPaused = !gameIsPaused;
             pauseMenu.SetActive(!pauseMenu.gameObject.activeSelf);
         }
 
         if (gameIsPaused)
         {
-            fpcscript.enabled = false;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            // fpcscript.enabled = false;
+            // Cursor.visible = true;
+            // Cursor.lockState = CursorLockMode.None;
+            interaction.RestrictMovement = true;
             dialogueSystem.SetActive(false);
         }
-        else if (!gameIsPaused)
+        else
         {
-            
+            // fpcscript.enabled = true;
+            // Cursor.visible = false;
+            // Cursor.lockState = CursorLockMode.Locked;
+            interaction.RestrictMovement = false;
             dialogueSystem.SetActive(true);
         }
 
