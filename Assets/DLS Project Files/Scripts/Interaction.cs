@@ -8,7 +8,13 @@ public class Interaction : MonoBehaviour
 {
 
     [Header("Yarn Components")]
-    public string talktonode;
+    public string CurrConvo;
+    public string ConvoFirst;
+    public string ConvoLose;
+    public string ConvoWin;
+    public string ConvoBye;
+    public int NPCValue;
+
     public DialogueRunner diaRunner;
 
     public GameObject player;
@@ -58,6 +64,19 @@ public class Interaction : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
+
+        if(GlobalVariables.NPCDialogueValue[NPCValue] == 0)
+        {
+            CurrConvo = ConvoFirst;
+        }
+        else if(GlobalVariables.NPCDialogueValue[NPCValue] == 1)
+        {
+            CurrConvo = ConvoLose;
+        }
+        else if(GlobalVariables.NPCDialogueValue[NPCValue] == 2)
+        {
+            CurrConvo = ConvoWin;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,6 +91,19 @@ public class Interaction : MonoBehaviour
 
     private void StartConversation()
     {
-        diaRunner.StartDialogue(talktonode);
+        diaRunner.StartDialogue(CurrConvo);
+    }
+
+    [YarnCommand("setnpcvalue")]
+    private void SetNPCValue(GameObject gameobj, int npc , string dialoguevalue)
+    {
+        if(dialoguevalue == "lose")
+        {
+            GlobalVariables.NPCDialogueValue[npc] = 1;
+        }
+        else if(dialoguevalue == "win")
+        {
+            GlobalVariables.NPCDialogueValue[npc] = 2;
+        }
     }
 }

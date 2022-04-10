@@ -15,6 +15,7 @@ public class YarnCustomScript : MonoBehaviour
 
         diaRunner.AddCommandHandler<GameObject>("endconvo", EndConversation);
         diaRunner.AddCommandHandler<GameObject>("incrementbathvalue", IncrementBathValue);
+        // diaRunner.AddCommandHandler<GameObject>("setnpcvalue", SetNPCValue);
 
         arbitraryObject = this.gameObject;
     }
@@ -29,4 +30,17 @@ public class YarnCustomScript : MonoBehaviour
     {
         GlobalVariables.BathroomDialogueValue++;
     }
+
+    // [YarnCommand("setnpcvalue")]
+    // private void SetNPCValue(GameObject gameobj, int npc , string dialoguevalue)
+    // {
+    //     if(dialoguevalue == "lose")
+    //     {
+    //         GlobalVariables.NPCDialogueValue[npc] = 1;
+    //     }
+    //     else if(dialoguevalue == "win")
+    //     {
+    //         GlobalVariables.NPCDialogueValue[npc] = 2;
+    //     }
+    // }
 }
