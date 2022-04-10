@@ -1,58 +1,112 @@
 ﻿title: JockFirst
 tags:
 ---
-Player: Hey… Uh, how are you liking the party?
+You: Hey… Uh, how are you liking the party?
 Jock: Dude, I’ve been raging since Thursday and I’ll keep goin until the booze dries up… or I do! 
-Player: So… you’re still having fun? Or does the energy plummet after the third time?
+You: So… you’re still having fun? Or does the energy plummet after the third time?
 Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this new drink I’ve created. I call it the Sugar Blast! It’s two shots of tequila, a handful of skittles, whipped cream and… some other stuff I think. 
--> Player: That sounds disgusting! 
+-> You: That sounds disgusting! 
     Jock: You're no fun.
--> Player: I think I'll stick to water for now. 
+-> You: I think I'll stick to water for now. 
     Jock: For sure, gotta pace yourself.
     Jock: So how are you enjoying the party?
-    -> Player: I'm a bit anxious.
+    -> You: I'm a bit anxious.
         Jock: Damn, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
-        ->Player: Not really...
+        ->You: Not really...
             Jock: Oh, sorry...
-        ->Player: Being away from people in a quiet place.
+        ->You: Being away from people in a quiet place.
             Jock: Oh, I can leave you alone if you want...
-        ->Player: Music helps me calm down.
+        ->You: Music helps me calm down.
             Jock: Me too! It helps to sing what I’m feeling. I’m pretty fucking drunk!
-            Player: This song slaps!
+            You: This song slaps!
             Jock: Yeah! It’s got a good beat!
-            Player: I’ve been trying to figure out what it’s called.
+            You: I’ve been trying to figure out what it’s called.
             Jock: Hmm, I don’t know the name, but at some point it goes: somethin’, somethin’ (insert word from song here). Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
-    -> Player: It's alright...
--> Player: Sure, I'll at least try a sip. 
+    -> You: It's alright...
+-> You: Sure, I'll at least try a sip. 
     Jock: Fuck yeah! Let's party. 
     Jock: So whatcha think? Want me to make another? 
-    -> Player: I think if I have one more, I might go into a coma. 
+    -> You: I think if I have one more, I might go into a coma. 
         Jock: For sure, gotta pace yourself. 
-    -> Player: Uhh, sure... Keep 'em coming. 
+    -> You: Uhh, sure... Keep 'em coming. 
         Jock: You okay? Your face is turning a line-skittle color. 
-        Player: I don't feel so good. I'm gonna walk home. 
+        You: I don't feel so good. I'm gonna walk home. 
         Jock: Oh, uh, alright dude. 
+===
+
+title: JockSecond
+---
+blah blah blah go away
 ===
 
 title: MomFirst
 ---
-dkjfhdfhjadfh
-flajkhflkh
-fhjfh
-s
+You: Hi…
+Didi: Hey there! I'm Didi! How are ya? Had some water recently?
+-> You: Oh, I don’t need water… I’m staying sober for this one.
+    Didi: Sober people need water too. I mean, I'm the designated driver and I've probably had 24 ounces since I got here. You should go get some.
+-> You: Yep, got my own hydroflask.
+    Didi: Ooh, I love the stickers! Look at this! I’ve got a bunch on my phone!
+    -> You: That avocado sticker is cool!
+        Didi: Oh shit! That reminds me! I've gotta make sure there's enough guac out! I mean, I'm not the host or anything, but I have absolutely no qualms about rifling through soemone's fridge. Sorry, I've gotta go find the snack table.
+    -> You: The little cat is very cute!
+        Didi: Well, I gotta have a kitty sticker! I'm a parent of two myself... cats, that is. Though, I babysit on weekends. Mostly Chad.
+        -> You: Who is Chad and why do they need babysitting?
+            Didi: The person making those disgusting cocktails...
+            -> You: Disgusting cocktails? Guess I'll have to try one.
+                Didi: I'm not cleaning up after you if you end up puking in the silverware drawer! I'm still not over the one and only time that has ever happened to me...
+                -> You: Ew, that's disgusting. Whoever made you clean that up sucks
+                    Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                -> You: I promise I won't do that...
+                    Didi: They all say that.
+            -> You: I'm pretty sure I've met them. That checks out...
+                Didi: Hey, only I'm allowed to say mean things about my friends!
+            -> You: Ohhh...I was talking to them earlier. They seem like they know what's up.
+                Didi: You know, Chad might seem like some silly, confident party animal, but they're a little kitten with a big heart under all of that. You know, I switched out their tequila with water after the second shot. They're kinda a lightweight, but they like keeping up with everyone else.
+                -> You: That seems like a lot of work for you... You're a good friend.
+                    Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+-> You: Oh, shoot! I should probably get some…
+    Didi: I’ve got you covered! I always carry a water bottle in my bag. Sometimes it comes in handy basically packing for a three day vacation every time I leave the house. Though my tendency to have a two ton bag is gonna send me to a chiropractor someday…
+    -> You: Have you ever considered *not* bringing that much to a party?
+        Didi: Considered? Many times. Attempted? Only once. It was a disaster. The host didn't get enough snacks and we sent the drunkest of everyone to go to a conveiniece store. She didn't come back until and hour later and had apparently forgotten what she was doing and took a walk to the ocean and back. We were two miles from the ocean! Chad threw up in the silverware drawer... We don't talk about the bagless night...
+        -> You: Ew, I would have just left at that point... I've gotta know more about this disaster of a party.
+            Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+        -> You: How does someone manage to throw up in a silverware drawer?
+            Didi: They thought the silverware drawer handle was the handle to the compartment below the sink where the trashcan was. They made a valiant effort and if I had just had my bag (which always has a few paper bags in it)... we could have avoided it. Anyways! No more talking about that night! I've already said too much... If you run into Chad tonight, could you not tell them we talked about it?
+            -> Sure thing. Don't want to bring up bad memories.
+                Didi: You know, Chad might seem like some silly, confident party animal, but they're a little kitten with a big heart under all of that. You know, I switched out their tequila with water after the second shot. They're kinda a lightweight, but they like keeping up with everyone else.
+                -> You: That seems like a lot of work for you... You're a good friend.
+                    Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+            -> That doesn't sound so bad...
+                Didi: Well, I guess you just had to be there.
+                -> You: I guess so...
+    -> You: Just get yourself a few pack mules and that'll solve the back problem.
+        Didi: You are a fucking genius! Who do you think I should recruit?
+        -> You: Definitely the person making the weird cocktails.
+            Didi: Haha! Chad? Why him?
+            -> You: He seems like he has his shit together. To give him something better to do than making those gross drinks.
+                Didi: Hey, only I'm allowed to say mean things about my friends!
+        -> You: Well, I could help you with it.
+            Didi: Um, no thank you. No way in hell I'm trusting someone else with this resposibility! What if someone gets hurt? Do you know how to put a Dora band-aid on someone properly? Can you tell exactly what snack someone would like just by looking at them? I don't think so...
+    -> You: Whoa, two tons?! I can help you with that for a minute.
+        Didi: Um, no thank you. No way in hell I'm trusting someone else with this resposibility! What if someone gets hurt? Do you know how to put a Dora band-aid on someone properly? Can you tell exactly what snack someone would like just by looking at them? I don't think so...
+===
+
+title: MomSecond
+---
+blah blah blah go away
 ===
 
 title: BathroomFirst
 ---
+<<incrementbathvalue this>>
 <i> You’re fine, you’re fine. 
 <i> You just gotta get out of the bathroom… How long have you been in the bathroom? 
 <i> Your phone tells you it’s eleven. 
 <i> You’ve been in there for fifteen minutes. They probably think you’re yacking. 
 <i> Is that better or worse than people knowing that you’re pacing? 
 <i> Can they hear the sound each sticky shoe leaves as it fights against old beer and traces of mud?
-
 “Hey! I really need to piss and I think someone’s taking a shower in the other bathroom! Could you hurry it up in there?”
-
 <i> Who the fuck takes a shower at a party?
 <i> Alright.
 <i> One more deep breath.
@@ -65,9 +119,36 @@ title: BathroomFirst
 
 title: BathroomSecond
 ---
-adsjklfhasdklfhj
-flajhsdfal
-flk
+<<incrementbathvalue this>>
+<i> This is definitely not where you were trying to get to. 
+<i> You opened the door to leave and stepped outside… So why the fuck are you standing in the bathroom?
+<i> Your phone screen lights up as you take it out of your pocket. 
+<i> Wait, what? 
+<i> It’s eleven… How is that possible?! 
+
+“Hey! I really need to piss and I think someone’s taking a shower in the other bathroom! Could you hurry it up in there?”
+
+<i> Unless that person is taking a really long shower, you’re pretty sure there’s some sort of Groundhog’s Day shit going on. 
+<i> Your breaths become ragged and you start to pace again. 
+<i> Same sticky feeling. 
+<i> Same fucking party that you thought you tried to leave a few minutes ago… or a few minutes in the future? 
+<i> Your brain hurts. Here comes the start of that same song. Can a song be considered stuck in your head when it’s been playing the whole time? 
+<i> Your mom always said to get something out of your head, you had to listen to the whole thing. 
+<i> There’s something about this song… Somehow you know that if you have this song everything else will fall into place…
+
+===
+
+title: BathroomThird
+---
+<i> Shit! Not back here again! 
+<i> You look at your phone even though you know what time it’s gonna show you. Eleven. 
+<i> You’re getting really tired of the alcohol-covered bathroom tiles.
+“Hey! I really need to piss and I think someone’s taking a shower in the other bathroom! Could you hurry it up in there?”
+<i> Well, it seems like it’s time to leave. Your heart rate evens out as the song begins. 
+<i> There’s just something about this song… It makes you feel calm. 
+<i> Even though you know you could be stuck in a time loop forever, at least you have this music. 
+<i> Somehow you know that if you have this song everything else will fall into place… 
+
 ===
 
 title: DummyDialogue

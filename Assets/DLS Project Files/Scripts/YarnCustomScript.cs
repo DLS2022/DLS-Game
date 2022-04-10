@@ -14,6 +14,7 @@ public class YarnCustomScript : MonoBehaviour
         diaRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
 
         diaRunner.AddCommandHandler<GameObject>("endconvo", EndConversation);
+        diaRunner.AddCommandHandler<GameObject>("incrementbathvalue", IncrementBathValue);
 
         arbitraryObject = this.gameObject;
     }
@@ -22,5 +23,10 @@ public class YarnCustomScript : MonoBehaviour
     {   
         Debug.Log("here");
         arbitraryObject.SetActive(true);
+    }
+
+    private void IncrementBathValue(GameObject gameobj)
+    {
+        GlobalVariables.BathroomDialogueValue++;
     }
 }

@@ -18,6 +18,19 @@ public class BathroomDialogueStartup : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        if(GlobalVariables.BathroomDialogueValue == 0)
+        {
+            GlobalVariables.AutoNode = "BathroomFirst";
+        }
+        else if(GlobalVariables.BathroomDialogueValue == 1)
+        {
+            GlobalVariables.AutoNode = "BathroomSecond";
+        }
+        else if(GlobalVariables.BathroomDialogueValue == 2)
+        {
+            GlobalVariables.AutoNode = "BathroomThird";
+        }
+
         diaRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         diaRunner.startNode = GlobalVariables.AutoNode;
     }
@@ -66,6 +79,11 @@ public class BathroomDialogueStartup : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F2))
         {
             SceneManager.LoadScene(1);
+        }
+
+        if(Input.GetKeyDown(KeyCode.F3))
+        {
+            GlobalVariables.BathroomDialogueValue++;
         }
     }
 }
