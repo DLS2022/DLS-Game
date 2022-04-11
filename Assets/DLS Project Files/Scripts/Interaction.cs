@@ -79,7 +79,12 @@ public class Interaction : MonoBehaviour
                 //Player Dialogue can be activated
                 //Debug.Log("You hit the trigger");
                 StartConversation();
-                
+
+
+                if (this.gameObject.tag == ("BathroomDoor") || (this.gameObject.tag == ("Bedroom")))
+                {
+                    SoundManager.instance.sound.PlayOneShot(SoundManager.instance.doorRattle);
+                }
             } 
         }
 
@@ -167,6 +172,11 @@ public class Interaction : MonoBehaviour
         // blackPanel.SetActive(true);
         fpcscript.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
         blackPanel.CrossFadeAlpha(1, 1f, false);
+
+        // Outside Door Opening Sound
+        SoundManager.instance.sound.PlayOneShot(SoundManager.instance.doorOpen);
+
+
         // FadeAnimation.Play("BlackFadeAnimation");
         yield return new WaitForSecondsRealtime(1f);
         // blackPanel.SetActive(false);

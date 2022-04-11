@@ -52,7 +52,7 @@ You: Hi…
 Didi: Hey there! I'm Didi! How are ya? Had some water recently?
 -> You: Oh, I don’t need water… I’m staying sober for this one.
     Didi: Sober people need water too. I mean, I'm the designated driver and I've probably had 24 ounces since I got here. You should go get some.
-    <<setnpcvalue this 1 1>>
+    
 -> You: Yep, got my own hydroflask.
     Didi: Ooh, I love the stickers! Look at this! I’ve got a bunch on my phone!
     -> You: That avocado sticker is cool!
@@ -191,6 +191,12 @@ title: BathroomDoorLocked
 <i> Someone is in there
 ===
 
+title: Bedroom
+---
+<i> The Doors locked
+Didi:<b> Get away from my room
+===
+
 title: TesterDialogue
 ---
 <<setfoundwords MusicWordsFoundUI this randomword 1>>
@@ -215,10 +221,10 @@ asdkfjhafk
 aslfjkh
 ===
 
-title: LoopDoorOne
+title: GoOutside
 ---
 <i>Would you like to leave?
 -> Yes
-    <<resetscene PartyJockNPC this>>
+    <<resetscene OutsideDoor this>>
 -> No
 ===
