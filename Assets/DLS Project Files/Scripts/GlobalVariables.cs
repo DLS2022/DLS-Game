@@ -17,4 +17,6 @@ public class GlobalVariables : MonoBehaviour
     [2] Pun
     */
     public static int[] NPCDialogueValue = new int[3];
+
+    public static bool[] AllFoundWords = new bool[3];
 }

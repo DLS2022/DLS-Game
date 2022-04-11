@@ -22,10 +22,11 @@ Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
             You: This song slaps!
             Jock: Yeah! It’s got a good beat!
             You: I’ve been trying to figure out what it’s called.
-            Jock: Hmm, I don’t know the name, but at some point it goes: somethin’, somethin’ (insert word from song here). Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+            Jock:  Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+            <<setfoundwords MusicWordsFoundUI this SOMEWHERE 2>>
     -> You: It's alright...
 -> You: Sure, I'll at least try a sip. 
-    Jock: Fuck yeah! Let's party. 
+    Jock: &@! yeah! Let's party. 
     Jock: So whatcha think? Want me to make another? 
     -> You: I think if I have one more, I might go into a coma. 
         Jock: For sure, gotta pace yourself.
@@ -56,7 +57,7 @@ Didi: Hey there! I'm Didi! How are ya? Had some water recently?
 -> You: Yep, got my own hydroflask.
     Didi: Ooh, I love the stickers! Look at this! I’ve got a bunch on my phone!
     -> You: That avocado sticker is cool!
-        Didi: Oh shit! That reminds me! I've gotta make sure there's enough guac out! I mean, I'm not the host or anything, but I have absolutely no qualms about rifling through soemone's fridge. Sorry, I've gotta go find the snack table.
+        Didi: Oh $*?%! That reminds me! I've gotta make sure there's enough guac out! I mean, I'm not the host or anything, but I have absolutely no qualms about rifling through soemone's fridge. Sorry, I've gotta go find the snack table.
     -> You: The little cat is very cute!
         Didi: Well, I gotta have a kitty sticker! I'm a parent of two myself... cats, that is. Though, I babysit on weekends. Mostly Chad.
         -> You: Who is Chad and why do they need babysitting?
@@ -71,21 +72,45 @@ Didi: Hey there! I'm Didi! How are ya? Had some water recently?
                 Didi: Hey, only I'm allowed to say mean things about my friends!
             -> You: Ohhh...I was talking to them earlier. They seem like they know what's up.
                 Didi: You know, Chad might seem like some silly, confident party animal, but they're a little kitten with a big heart under all of that. You know, I switched out their tequila with water after the second shot. They're kinda a lightweight, but they like keeping up with everyone else.
-                -> You: That seems like a lot of work for you... You're a good friend.
+                -> You: That seems like a lot of work for you...
                     Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                -> You: You're a good friend.
+                    Didi: Thanks! I try.
+                    You: Hey, you wanna help me out with something?
+                    Didi: Of course! I'm always here to help a friend in need!
+                    You: I'm a friend?
+                    Didi: Sure! I'm always looking for more people for me to bestow my wise words -or snacks- upon. And sometimes, though I know I may not seem like it, I like to have someone to lean on too.
+                    You: Do you know the name of this song that's playing?
+                    <<setfoundwords MusicWordsFoundUI this NEW 3>>
+                    Didi: Let me think... I'm sorry, I don't think I know the name. I'm pretty sure it's a pretty NEW song.
+                    You: Thanks anyways!
+                    <i> The song is becoming a little less muddled by the party sounds around you...
 -> You: Oh, shoot! I should probably get some…
     Didi: I’ve got you covered! I always carry a water bottle in my bag. Sometimes it comes in handy basically packing for a three day vacation every time I leave the house. Though my tendency to have a two ton bag is gonna send me to a chiropractor someday…
     -> You: Have you ever considered *not* bringing that much to a party?
         Didi: Considered? Many times. Attempted? Only once. It was a disaster. The host didn't get enough snacks and we sent the drunkest of everyone to go to a conveiniece store. She didn't come back until and hour later and had apparently forgotten what she was doing and took a walk to the ocean and back. We were two miles from the ocean! Chad threw up in the silverware drawer... We don't talk about the bagless night...
-        -> You: Ew, I would have just left at that point... I've gotta know more about this disaster of a party.
+        -> You: Ew, I would have just left at that point...
             Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+        -> You: I've gotta know more about this disaster of a party.
+            Didi: I'm sorry, that's all the detail I can give you. We. Do. Not. Talk. About. That. Night.
         -> You: How does someone manage to throw up in a silverware drawer?
             Didi: They thought the silverware drawer handle was the handle to the compartment below the sink where the trashcan was. They made a valiant effort and if I had just had my bag (which always has a few paper bags in it)... we could have avoided it. Anyways! No more talking about that night! I've already said too much... If you run into Chad tonight, could you not tell them we talked about it?
             -> Sure thing. Don't want to bring up bad memories.
                 Didi: You know, Chad might seem like some silly, confident party animal, but they're a little kitten with a big heart under all of that. You know, I switched out their tequila with water after the second shot. They're kinda a lightweight, but they like keeping up with everyone else.
-                -> You: That seems like a lot of work for you... You're a good friend.
+                -> You: That seems like a lot of work for you...
                     Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
-            -> That doesn't sound so bad...
+                -> You: You're a good friend.
+                    Didi: Thanks! I try.
+                    You: Hey, you wanna help me out with something?
+                    Didi: Of course! I'm always here to help a friend in need!
+                    You: I'm a friend?
+                    Didi: Sure! I'm always looking for more people for me to bestow my wise words -or snacks- upon. And sometimes, though I know I may not seem like it, I like to have someone to lean on too.
+                    You: Do you know the name of this song that's playing?
+                    <<setfoundwords MusicWordsFoundUI this NEW 3>>
+                    Didi: Let me think... I'm sorry, I don't think I know the name. I'm pretty sure it's a pretty NEW song.
+                    You: Thanks anyways!
+                    <i> The song is becoming a little less muddled by the party sounds around you...
+            -> You: That doesn't sound so bad...
                 Didi: Well, I guess you just had to be there.
                 -> You: I guess so...
     -> You: Just get yourself a few pack mules and that'll solve the back problem.
@@ -112,7 +137,60 @@ blah blah blah you win
 
 title: PunFirst
 ---
-blah blah blah first dialogue
+You: Hey there!
+Slug: Hiya! I'm Sloane, but my friends call me Slug!
+-> You: Sloane is a nice name!
+    Slug: I guess... but I personally like Slug better...
+-> You: Why do they call you Slug?
+    Slug: I used to be all curled up in a shell... Just a tiny little snail... Then I crawled out and now I'm here! Just buggin' around!
+    -> I don't think that's how slugs work...
+        Slug: If anyone would know how slugs work, it'd be me! I mean, I am Slug!
+        You: Okay, whatever you say...
+    -> You: Bugs are pretty cool!
+        Slug: Yeah, I'm kind of a bug fanatic. I don't get why people are afraid of spiders or think bugs are gross. Even roaches have a place in my heart.
+        -> You: Actually, I'm kind of afriad of spiders...
+            Slug: That's too bad... They aren't trying to hurt anybody... How would you feel if someone yelled at you and tried to squish you when you were just vibin'?
+            You: Not good, I guess...
+        -> You: Okay, but roaches? They're a little gross...
+            Slug: That's not cool! Roaches aren't gross! They're part of the ecosystem... I actually think they're cute.
+            You: Oh... sorry...
+        -> You: Me too! I was a total animal kid growing up.
+            Slug: Aww, cute! I can totally see that! Speaking of animals, wanna hear a joke?
+            -> You: No thanks.
+                Slug: Oh... okay... fine...
+            -> You: Uh... I guess?
+                Slug: You don't have to pretend to be interested...
+            -> You: Yeah!
+                Slug: Yay! Okay, here it is! How are a cat and a sentence different?
+                -> You: Hmm… I don’t know…
+                    Slug: A cat has claws at the end of its paws and a sentence has a pause at the end of its clause! Get it? Get it?
+                    -> You: That's pretty good!
+                        Slug: I've got more if you want another!
+                        -> You: I think I'm all joked out
+                            Oh... okay... fine...
+                        -> You: Uh... I guess?
+                            You don't have to pretend to be interested...
+                        -> You: Let me hear it!
+                            Slug: What has T in the beginning, T in the middle, and T at the end?
+                            You: Uhhh, I have no idea...
+                            Slug: A teapot!
+                            -> You: Ohhh... A teapot... right...
+                                Slug: You don't have to pretend to get it just to spare my feelings...
+                                You: Oh, okay...
+                            -> You: Wait... I don't get it...
+                                Slug: It’s cuz the word “teapot” starts with a T and ends with a T and inside of it there's… you know what… nevermind…
+                    -> You: Wow, that's pretty bad...
+                        Slug: Well, I guess you just don't have a sense of humor!
+                -> You: One’s fuzzy?
+                    Slug: Come on! Everyone knows you’re not really supposed to try to answer when someone is telling you a joke.
+    -> You: I don't know if I'd wanna be a bug. I don't think they even have brains...
+        Slug: What are you talking about? Bugs for sure have brains! They're smart little guys! Most of them even have brains that are spread out all over their body! They might have tiny brains, but you shouldn't discredit them just cuz they're small...
+        You: Oh, uh... sorry...
+-> You: That's not very nice of them...
+    Slug: Well it's not very nice of you to assume I don't like being called Slug. Slugs are &*@!ing awesome!
+-> TESTER CHOICE TO GET WORD BC THERE'S NO OTHER WAY RN
+    <<setfoundwords MusicWordsFoundUI this BELONGING 1>>
+    THE WORD IS BELONGING
 ===
 
 title: PunLose

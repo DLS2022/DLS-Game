@@ -25,7 +25,13 @@ public class ShowRoomName : MonoBehaviour
     {
 
         roomText.SetText(FirstWord + "    " + SecondWord + "    " + ThirdWord);
+        /*
+        BELONGING SOMEWHERE NEW
 
+        BELONGING: DIDI
+        SOMEWHERE: JOCK
+        NEW: PUN
+        */
         
     }
 
@@ -44,6 +50,9 @@ public class ShowRoomName : MonoBehaviour
         {
             ThirdWord = foundword;
         }
+
+        GlobalVariables.AllFoundWords[whichword-1] = true;
+        Debug.Log("Word " + whichword + " " + GlobalVariables.AllFoundWords[whichword-1]);
     }
 
 }
