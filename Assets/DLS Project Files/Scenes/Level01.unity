@@ -5219,10 +5219,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1407746259}
+    - target: {fileID: 2274529864040266692, guid: 4a994306627d9ca4bb9dd2cd8881b27f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2274529864044951627, guid: 4a994306627d9ca4bb9dd2cd8881b27f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1407746259}
+    - target: {fileID: 2274529864457903579, guid: 4a994306627d9ca4bb9dd2cd8881b27f, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2274529864840930997, guid: 4a994306627d9ca4bb9dd2cd8881b27f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
