@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
     public AudioSource sound;
     public AudioClip doorOpen;
+    public AudioClip doorOpen2;
     public AudioClip doorRattle;
     public AudioClip walkingSFX;
     public AudioClip interactionSFX;

@@ -895,8 +895,9 @@ GameObject:
   - component: {fileID: 1085923212710314416}
   - component: {fileID: 1085923212710314423}
   - component: {fileID: 1085923212710314422}
+  - component: {fileID: 999942372}
   m_Layer: 0
-  m_Name: Cube.007
+  m_Name: OutsideDoor
   m_TagString: OutsideDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,7 +999,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085923212710314420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ea073d89106309459d3c8b99b1c2bcc, type: 3}
   m_Name: 
@@ -1009,6 +1010,32 @@ MonoBehaviour:
   controller: {fileID: 0}
   blackPanel: {fileID: 0}
   spaceBarImage: {fileID: 0}
+--- !u!114 &999942372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085923212710314420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71675a0766902c444b45aa8c6c5fbc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrConvo: 
+  ConvoFirst: GoOutside
+  ConvoLose: 
+  ConvoWin: 
+  ConvoBye: 
+  NPCValue: 0
+  spaceBarImage: {fileID: 0}
+  roomText: {fileID: 0}
+  blackPanel: {fileID: 0}
+  diaRunner: {fileID: 0}
+  player: {fileID: 0}
+  fpcscript: {fileID: 0}
+  RestrictMovement: 0
+  FadeAnimation: {fileID: 0}
 --- !u!1 &1085923212871037070
 GameObject:
   m_ObjectHideFlags: 0
@@ -6431,7 +6458,6 @@ GameObject:
   - component: {fileID: 7955586470617022550}
   - component: {fileID: 7955586470617022549}
   - component: {fileID: 7955586470617022548}
-  - component: {fileID: 7955586470617022547}
   m_Layer: 0
   m_Name: MainRoom
   m_TagString: Untagged
@@ -6529,19 +6555,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.02, z: 0.00791116}
   m_Center: {x: -0.0000000018626451, y: 1.400167e-16, z: 0.0065685315}
---- !u!114 &7955586470617022547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7955586470617022545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7044d71a413360e409b96b756c43924f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomText: {fileID: 0}
 --- !u!1 &7955586470622426469
 GameObject:
   m_ObjectHideFlags: 0
@@ -7627,7 +7640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7955586470951010252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7955586471862860727}
@@ -8625,7 +8638,6 @@ GameObject:
   - component: {fileID: 7955586471332152377}
   - component: {fileID: 7955586471332152376}
   - component: {fileID: 7955586471332152375}
-  - component: {fileID: 7955586471332152374}
   m_Layer: 0
   m_Name: Bathroom
   m_TagString: Untagged
@@ -8723,19 +8735,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.00791116}
   m_Center: {x: -0.000000009313226, y: -0.0000000018626449, z: 0.0065685315}
---- !u!114 &7955586471332152374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7955586471332152372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7044d71a413360e409b96b756c43924f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomText: {fileID: 0}
 --- !u!1 &7955586471483135733
 GameObject:
   m_ObjectHideFlags: 0
@@ -10017,9 +10016,13 @@ MonoBehaviour:
   ConvoBye: 
   NPCValue: 0
   spaceBarImage: {fileID: 0}
+  roomText: {fileID: 0}
+  blackPanel: {fileID: 0}
   diaRunner: {fileID: 0}
   player: {fileID: 0}
   fpcscript: {fileID: 0}
+  RestrictMovement: 0
+  FadeAnimation: {fileID: 0}
 --- !u!1 &7955586471862882345
 GameObject:
   m_ObjectHideFlags: 0
@@ -10514,9 +10517,10 @@ GameObject:
   - component: {fileID: 7955586471989070675}
   - component: {fileID: 7955586471989070674}
   - component: {fileID: 7955586471989070673}
+  - component: {fileID: 865758701}
   m_Layer: 0
-  m_Name: Cube.007
-  m_TagString: OutsideDoor
+  m_Name: BedroomDoor
+  m_TagString: Bedroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10617,7 +10621,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7955586471989070767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ea073d89106309459d3c8b99b1c2bcc, type: 3}
   m_Name: 
@@ -10628,6 +10632,32 @@ MonoBehaviour:
   controller: {fileID: 0}
   blackPanel: {fileID: 0}
   spaceBarImage: {fileID: 0}
+--- !u!114 &865758701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7955586471989070767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71675a0766902c444b45aa8c6c5fbc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrConvo: 
+  ConvoFirst: Bedroom
+  ConvoLose: 
+  ConvoWin: 
+  ConvoBye: 
+  NPCValue: 0
+  spaceBarImage: {fileID: 0}
+  roomText: {fileID: 0}
+  blackPanel: {fileID: 0}
+  diaRunner: {fileID: 0}
+  player: {fileID: 0}
+  fpcscript: {fileID: 0}
+  RestrictMovement: 0
+  FadeAnimation: {fileID: 0}
 --- !u!1 &7955586472019610085
 GameObject:
   m_ObjectHideFlags: 0
@@ -13144,6 +13174,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3292657645953925573, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657645953925573, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbeab00206586774fb24f66e00bbad98, type: 3}
     - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13176,6 +13214,22 @@ PrefabInstance:
       propertyPath: startNode
       value: BathroomFirst
       objectReference: {fileID: 0}
+    - target: {fileID: 7778558434911714085, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434911714085, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 245.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434911714087, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434911714087, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbeab00206586774fb24f66e00bbad98, type: 3}
     - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0

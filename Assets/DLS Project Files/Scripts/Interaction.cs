@@ -174,7 +174,7 @@ public class Interaction : MonoBehaviour
         blackPanel.CrossFadeAlpha(1, 1f, false);
 
         // Outside Door Opening Sound
-        SoundManager.instance.sound.PlayOneShot(SoundManager.instance.doorOpen);
+        SoundManager.instance.sound.PlayOneShot(SoundManager.instance.doorOpen2);
 
 
         // FadeAnimation.Play("BlackFadeAnimation");

@@ -9,6 +9,7 @@ TagManager:
   - BathroomDoor
   - OutsideDoor
   - BlackScreen
+  - Bedroom
   layers:
   - Default
   - TransparentFX
