@@ -80,6 +80,10 @@ public class Interaction : MonoBehaviour
                 //Debug.Log("You hit the trigger");
                 StartConversation();
 
+                if (this.gameObject.tag == ("NPC"))
+                {
+                    SoundManager.instance.sound.PlayOneShot(SoundManager.instance.interactionSFX);
+                }
 
                 if (this.gameObject.tag == ("BathroomDoor") || (this.gameObject.tag == ("Bedroom")))
                 {
