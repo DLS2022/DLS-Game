@@ -297,13 +297,14 @@ GameObject:
   - component: {fileID: 129263033}
   - component: {fileID: 129263035}
   - component: {fileID: 129263034}
+  - component: {fileID: 129263036}
   m_Layer: 5
   m_Name: FadeToBlack
-  m_TagString: Untagged
+  m_TagString: BlackScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &129263033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -361,6 +362,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129263032}
   m_CullTransparentMesh: 1
+--- !u!95 &129263036
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129263032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d33abcb7c9b05b5489da13c41c727109, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &265151055
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +551,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_TargetDisplay: 0
 --- !u!224 &318738076
 RectTransform:
@@ -2005,6 +2025,37 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!1 &999942370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085923212710314420, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+  m_PrefabInstance: {fileID: 7955586471419740880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &999942372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999942370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71675a0766902c444b45aa8c6c5fbc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrConvo: 
+  ConvoFirst: LoopDoorOne
+  ConvoLose: 
+  ConvoWin: 
+  ConvoBye: 
+  NPCValue: 0
+  spaceBarImage: {fileID: 1056215474}
+  roomText: {fileID: 0}
+  blackPanel: {fileID: 129263034}
+  diaRunner: {fileID: 0}
+  player: {fileID: 0}
+  fpcscript: {fileID: 0}
+  RestrictMovement: 0
+  FadeAnimation: {fileID: 129263036}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,6 +5277,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: blackPanel
+      value: 
+      objectReference: {fileID: 129263034}
+    - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: FadeAnimation
+      value: 
+      objectReference: {fileID: 129263036}
+    - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: spaceBarImage
       value: 
       objectReference: {fileID: 1056215474}
@@ -5249,6 +5308,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 402252007033731693, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 402252007033731693, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 245.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 402252007033731695, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402252007033731695, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbeab00206586774fb24f66e00bbad98, type: 3}
+    - target: {fileID: 402252007033731695, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 402252007044509867, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -5299,6 +5378,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402252008198052092, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085923212710314420, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_Name
+      value: OutsideDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085923212710314422, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1085923212710314422, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
@@ -5309,6 +5396,14 @@ PrefabInstance:
       propertyPath: spaceBarImage
       value: 
       objectReference: {fileID: 1056215474}
+    - target: {fileID: 4888152795488174221, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888152795488174221, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbeab00206586774fb24f66e00bbad98, type: 3}
     - target: {fileID: 4888152795548350822, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -5361,6 +5456,10 @@ PrefabInstance:
       propertyPath: spaceBarImage
       value: 
       objectReference: {fileID: 1056215474}
+    - target: {fileID: 7955586471989070767, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: m_Name
+      value: BedroomDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 7955586472293934307, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: m_Name
       value: Main level
@@ -5410,13 +5509,45 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8249724283962971702, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: blackPanel
+      value: 
+      objectReference: {fileID: 129263034}
+    - target: {fileID: 8249724283962971702, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: FadeAnimation
+      value: 
+      objectReference: {fileID: 129263036}
+    - target: {fileID: 8249724283962971702, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: spaceBarImage
       value: 
       objectReference: {fileID: 1056215474}
     - target: {fileID: 8249724284507358549, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoFirst
+      value: MomFirst
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249724284507358549, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: blackPanel
+      value: 
+      objectReference: {fileID: 129263034}
+    - target: {fileID: 8249724284507358549, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: FadeAnimation
+      value: 
+      objectReference: {fileID: 129263036}
+    - target: {fileID: 8249724284507358549, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: spaceBarImage
       value: 
       objectReference: {fileID: 1056215474}
+    - target: {fileID: 8249724284915284397, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoFirst
+      value: JockFirst
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249724284915284397, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: blackPanel
+      value: 
+      objectReference: {fileID: 129263034}
+    - target: {fileID: 8249724284915284397, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: FadeAnimation
+      value: 
+      objectReference: {fileID: 129263036}
     - target: {fileID: 8249724284915284397, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: spaceBarImage
       value: 

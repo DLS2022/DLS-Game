@@ -4,6 +4,8 @@ using UnityEngine;
 using Yarn.Unity;
 using StarterAssets;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
@@ -24,12 +26,17 @@ public class Interaction : MonoBehaviour
     [Tooltip("This is the text for game objects name to be displayed")]
     TextMeshProUGUI roomText;
 
+    [SerializeField]
+    [Tooltip("UI FADE TO BLACK PANEL")]
+    Image blackPanel;
+
     public DialogueRunner diaRunner;
 
     public GameObject player;
     public FirstPersonController fpcscript;
     public bool RestrictMovement;
 
+    public Animator FadeAnimation;
 
     PauseGame pause;
     // public GameObject randoObj;
@@ -41,6 +48,7 @@ public class Interaction : MonoBehaviour
     {
         diaRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         pause = FindObjectOfType<PauseGame>();
+        blackPanel.CrossFadeAlpha(0, 3f, false);
 
         if(GlobalVariables.NPCDialogueValue[NPCValue] == 1)
         {
@@ -55,6 +63,8 @@ public class Interaction : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         fpcscript = player.GetComponent<FirstPersonController>();
+
+        // blackPanel = GameObject.FindWithTag("BlackScreen");
     }
 
     // Update is called once per frame
@@ -144,5 +154,26 @@ public class Interaction : MonoBehaviour
         {
             GlobalVariables.NPCDialogueValue[npc] = 2;
         }
+    }
+
+    [YarnCommand("resetscene")]
+    private void ResetScene(GameObject gameobj)
+    {
+        StartCoroutine(FadeToBlack());
+    }
+
+    IEnumerator FadeToBlack()
+    {
+        // blackPanel.SetActive(true);
+        fpcscript.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
+        blackPanel.CrossFadeAlpha(1, 1f, false);
+        // FadeAnimation.Play("BlackFadeAnimation");
+        yield return new WaitForSecondsRealtime(1f);
+        // blackPanel.SetActive(false);
+        fpcscript.enabled = true;
+
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        SceneManager.LoadScene(1);
     }
 }

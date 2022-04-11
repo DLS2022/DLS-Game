@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Yarn.Unity;
 
 public class ShowRoomName : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("This is the text for game objects name to be displayed")]
     TextMeshProUGUI roomText;
+
+    private string FirstWord = "_ _ _ _ _";
+    private string SecondWord = "_ _ _ _ _";
+    private string ThirdWord = "_ _ _ _ _";
 
     // Start is called before the first frame update
     void Start()
@@ -19,14 +24,25 @@ public class ShowRoomName : MonoBehaviour
     void Update()
     {
 
+        roomText.SetText(FirstWord + "    " + SecondWord + "    " + ThirdWord);
+
+        
     }
 
-    private void OnTriggerEnter(Collider other)
+    [YarnCommand("setfoundwords")]
+    private void SetFoundWords(GameObject gameobj, string foundword, int whichword)
     {
-        if (FindObjectOfType<CharacterController>())
+        if(whichword == 1)
         {
-            Debug.Log(this.name);
-            roomText.SetText(this.name);
+            FirstWord = foundword;
+        }
+        else if(whichword == 2)
+        {
+            SecondWord = foundword;
+        }
+        else if(whichword == 3)
+        {
+            ThirdWord = foundword;
         }
     }
 

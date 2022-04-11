@@ -8,6 +8,7 @@ TagManager:
   - SpaceBar
   - BathroomDoor
   - OutsideDoor
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

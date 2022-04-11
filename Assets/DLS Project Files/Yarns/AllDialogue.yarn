@@ -190,3 +190,35 @@ title: BathroomDoorLocked
 <i> The Doors locked
 <i> Someone is in there
 ===
+
+title: TesterDialogue
+---
+<<setfoundwords MusicWordsFoundUI this randomword 1>>
+you win
+sadasjlhaskjhf
+asfasdjfh
+===
+
+title: TesterDialogue2
+---
+<<setfoundwords MusicWordsFoundUI this secondword 2>>
+you win
+asdkfjhafk
+aslfjkh
+===
+
+title: TesterDialogue3
+---
+<<setfoundwords MusicWordsFoundUI this thirdword 3>>
+you win
+asdkfjhafk
+aslfjkh
+===
+
+title: LoopDoorOne
+---
+<i>Would you like to leave?
+-> Yes
+    <<resetscene PartyJockNPC this>>
+-> No
+===

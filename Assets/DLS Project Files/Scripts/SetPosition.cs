@@ -87,7 +87,7 @@ public class SetPosition : MonoBehaviour
                 
 
                 //Screen Fades to black for .5f seconds
-                StartCoroutine(FadeToBlack());
+                // StartCoroutine(FadeToBlack());
              
                 
                 //One Way Doors
@@ -104,8 +104,10 @@ public class SetPosition : MonoBehaviour
             }
 
             else if (Input.GetKeyDown(KeyCode.Space) && this.gameObject.tag == ("OutsideDoor"))
-            {
-                StartCoroutine(FadeToBlack());
+            {   
+                controller.enabled = false;
+                // StartCoroutine(FadeToBlack());
+                controller.enabled = true;
                 SceneManager.LoadScene(1);
             }
         }
@@ -131,13 +133,13 @@ public class SetPosition : MonoBehaviour
 
 
     //Setting the screen to black when walking through a door
-    IEnumerator FadeToBlack()
-    {
-        blackPanel.SetActive(true);
-        controller.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
-        yield return new WaitForSeconds(.5f);
-        blackPanel.SetActive(false);
-        controller.enabled = true;
-    }
+    // IEnumerator FadeToBlack()
+    // {
+    //     blackPanel.SetActive(true);
+    //     controller.enabled = false; //This Line Causes the character controller to throw an error while inputs are disabled
+    //     yield return new WaitForSeconds(.5f);
+    //     blackPanel.SetActive(false);
+    //     controller.enabled = true;
+    // }
 
 }
