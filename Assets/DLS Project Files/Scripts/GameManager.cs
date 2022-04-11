@@ -61,5 +61,7 @@ public class GameManager : MonoBehaviour
         {
             GlobalVariables.AllFoundWords[i] = false;
         }
+
+        GlobalVariables.GameHasLooped = false;
     }
 }

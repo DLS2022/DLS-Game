@@ -10159,7 +10159,7 @@ PrefabInstance:
       objectReference: {fileID: 1056215474}
     - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: ConvoBye
-      value: GoOutside
+      value: GoOutsideLoop
       objectReference: {fileID: 0}
     - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: ConvoWin
@@ -10168,6 +10168,10 @@ PrefabInstance:
     - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: NPCValue
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLoop
+      value: GoOutsideLoop
       objectReference: {fileID: 0}
     - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: ConvoLose
@@ -10512,6 +10516,10 @@ PrefabInstance:
     - target: {fileID: 8249724283962971702, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: ConvoWin
       value: PunWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249724283962971702, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLoop
+      value: PunLoop
       objectReference: {fileID: 0}
     - target: {fileID: 8249724283962971702, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: blackPanel

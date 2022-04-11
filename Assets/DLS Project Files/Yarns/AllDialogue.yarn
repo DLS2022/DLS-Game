@@ -143,6 +143,7 @@ title: PunFirst
 You: Hey there!
 Slug: Hiya! I'm Sloane, but my friends call me Slug!
 -> You: Sloane is a nice name!
+    <<setnpcvalue PunnyBoyNPC this 2 lose>>
     Slug: I guess... but I personally like Slug better...
 -> You: Why do they call you Slug?
     Slug: I used to be all curled up in a shell... Just a tiny little snail... Then I crawled out and now I'm here! Just buggin' around!
@@ -193,6 +194,7 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
     Slug: Well it's not very nice of you to assume I don't like being called Slug. Slugs are &*@!ing awesome!
 -> TESTER CHOICE TO GET WORD BC THERE'S NO OTHER WAY RN
     <<setfoundwords MusicWordsFoundUI this BELONGING 1>>
+    <<setnpcvalue PunnyBoyNPC this 2 win>>
     THE WORD IS BELONGING
 ===
 
@@ -204,6 +206,156 @@ blah blah blah go away
 title: PunWin
 ---
 blah blah blah you win
+===
+
+title: PunLoop
+---
+You: Hey there!
+Slug: Hiya! I'm Sloane, but my friends call me Slug!
+-> You: Sloane is a nice name!
+    Slug: I guess... but I personally like Slug better...
+-> You: Why do they call you Slug?
+    Slug: I used to be all curled up in a shell... Just a tiny little snail... Then I crawled out and now I'm here! Just buggin' around!
+    -> I don't think that's how slugs work...
+        Slug: If anyone would know how slugs work, it'd be me! I mean, I am Slug!
+        You: Okay, whatever you say...
+    -> Bugs are pretty cool!
+        Slug: Yeah, I'm kind of a bug fanatic. I don't get why people are afraid of spiders or think bugs are gross. Even roaches have a place in my heart.
+        -> You: Actually, I'm kind of afraid of spiders...
+            Slug: That's too bad... They aren't trying to hurt anybody... How would you feel if someone yelled at you and tried to squish you when you were just vibin'?
+            You: Not good, I guess...
+        -> You: Okay, but roaches? They're a little gross...
+            Slug: That's not cool! Roaches aren't gross! They're part of the ecosystem... I actually think they're cute.
+            You: Oh... sorry...
+        -> You: Me too! I was a total animal kid growing up.
+            Slug: Aww, cute! I can totally see that! Speaking of animals, wanna hear a joke?
+            -> You: No thanks.
+                Slug: Oh... okay... fine...
+            -> You: Uh... I guess?
+                Slug: You don't have to pretend to be interested...
+            -> You: Yeah!
+                Slug: Yay! Okay, here it is! How are a cat and a sentence different?
+                ->Hmm... I don't know...
+                    Slug: A cat has claws at the end of its paws and a sentence has a pause at the end of its clause! Get it? Get it?
+                        -> You: That's pretty good!
+                            I've got more if you want another!
+                            -> You: I think I'm all joked out
+                                Slug: Oh... okay... fine...
+                            -> You: Uh... I guess?
+                                Slug: You don't have to pretend to be interested...
+                            -> You: Let me hear it!
+                                Slug: What has T in the beginning, T in the middle, and T at the end?
+                                You: Uhhh, I have no idea...
+                                Slug: A teapot!
+                                -> You: Ohhh... A teapot... right...
+                                    Slug: You don't have to pretend to get it just to spare my feelings...
+                                    You: Oh, okay...
+                                -> You: Wait... I don't get it...
+                                    Slug: It’s cuz the word “teapot” starts with a T and ends with a T and inside of it there's… you know what… nevermind…
+                        -> You: Wow, that's pretty bad...
+                            Slug: Well, I guess you just don't have a sense of humor!
+                ->One's fuzzy?
+                    Slug: Come on! Everyone knows you’re not really supposed to try to answer when someone is telling you a joke.
+    -> I don't know if I'd wanna be a bug. I don't think they even have brains...
+        Slug: What are you talking about? Bugs for sure have brains! They're smart little guys! Most of them even have brains that are spread out all over their body! They might have tiny brains, but you shouldn't discredit them just cuz they're small...
+        You: Oh, uh... sorry...
+-> You: Dude, I love slugs!
+    Slug: Really! That's sick! A lot of people think they're gross...
+    You: Not me! I was a real animal lover as a kid!
+    Slug: Me too! I know, like, a thousand animal fun facts!
+    -> You: Can I hear one?
+        Slug: Alright. Did you know that the tongue of a whale weighs more than an elephant?!
+        -> You: Yeah, I knew that!
+            Slug: Oh... I thought that would be a fun fact, but I guess it was just a boring fact...
+        -> You: No way!
+            Slug: Yes way! Also! Sea otters hold each other's paws to keep themselves from drifting off! Isn't that adorable? Oh! That reminds me! Wanna hear a joke?
+            -> You: Of course!
+                Slug: Okay. Here it is. I got invited to a wedding at the zoo but I didn't take a plus one cuz I don’t have a significant otter.
+                    -> You: ...Haha.
+                        Slug: Oh, come on! That was funny!
+                    -> You: I've got a joke for you!
+                        Slug: %@!! yeah! I love jokes!
+                        You: Alright, here it is...
+                        -> You: I can tell you a pun about the wind, but it kinda blows…
+                            Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                            You: Oh, I guess you're right...
+                        -> You: Why aren’t dogs good dancers?
+                            Slug: Oh! I know this one! They have two left feet!
+                            -> You: Oh... I guess I'm not very good at this...
+                                Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                You: Oh, I guess you're right...
+                            -> You: You got it!
+                                Slug: Haha, you can't out-pun the punster!
+                                -> You: What's a punster?
+                                    Slug: Pun. Master. Punster. C'mon, keep up!
+                                    You: Oh, sorry I guess I'm just a little slower than you at words...
+                                -> You: I bet I can! Give me a pun!
+                                    Slug: What did the snail say when it went to a French restaurant?
+                                    -> You: Hmm... I give up... I don't know...
+                                        Slug: Man, giving up after the first go??
+                                        -> You: I guess I'm not as good at this as I thought...
+                                            Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                            You: Oh, I guess you're right...
+                                    -> You: What a way to escargot!
+                                        Slug: Hey! You're not too bad at this! You're turn!
+                                            -> You: You know, I think I'm actually all out...
+                                                Slug: Aww, really?
+                                                    -> You: Yeah, I guess I'm not too good at this...
+                                                        Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                                        You: Oh, I guess you're right...
+                                                    -> You: I bow down to the pun master!
+                                                        Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                                        You: So how did you aquire the title of punster?
+                                                        Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                                        You: That's kind of unsettling...
+                                                        Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                                        You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                                        <<setfoundwords MusicWordsFoundUI this BELONGING 1>>
+                                                        Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                                        You: Me too!
+                                                        <i> Interesting...The song almost sounds...clearer?
+                                            -> You: Alright. What did the rabbit say to his fiancé?
+                                                Slug: Let's go on a bunnymoon!!
+                        -> You: Uhh... I actually can't think of one...
+                            -> You: Actually, I was gonna say "I carrot about you" but yours is better...
+                                Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                You: Oh, I guess you're right...
+                            -> You: Man you're good at this!
+                                Slug: Okay, okay. One last one. How much money does a pirate pay for corn?
+                                -> You: I can't even guess this one. I'm all punned out...
+                                    Slug: Aww, really?
+                                    -> Yeah, I guess I'm not too good at this...
+                                        Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                        You: Oh, I guess you're right...
+                                    -> I bow down to the pun master!
+                                        Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                        You: So how did you aquire the title of punster?
+                                        Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                        You: That's kind of unsettling...
+                                        Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                        You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                        <<setfoundwords MusicWordsFoundUI this BELONGING 1>>
+                                        Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                        You: Me too!
+                                        <i> Interesting...The song almost sounds...clearer?
+                                -> You: Hmm... an arm and a peg leg??
+                                    Slug: HAHA! I love it! I mean, that's not the answer I had in mind, but I like your determination!
+                                    You: That means a lot coming from you. You're, like, the pun master!
+                                    Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                    You: So how did you aquire the title of punster?
+                                    Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                    You: That's kind of unsettling...
+                                    Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                    You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                    <<setfoundwords MusicWordsFoundUI this BELONGING 1>>
+                                    Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                    You: Me too!
+                                    <i> Interesting...The song almost sounds...clearer?
+                                -> You: A buccaneer!!
+                                    Slug: Wait... what?? You got it? But I thought I was the master of puns... Guess there's a new punster in town...
+            -> You: No thanks.
+                Oh... okay... fine...
+    -> That's cool!
 ===
 
 title: BathroomFirst
@@ -303,6 +455,17 @@ aslfjkh
 ===
 
 title: GoOutside
+---
+<i>Would you like to leave?
+-> Yes
+    <<resetscene OutsideDoor this>>
+    <<setnpcvalue OutsideDoor this 3 looped>>
+    <<setnpcvalue PunnyBoyNPC this 2 looped>>
+
+-> No
+===
+
+title: GoOutsideLoop
 ---
 <i>Would you like to leave?
 -> Yes

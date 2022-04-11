@@ -22,9 +22,9 @@ public class ShowSongName : MonoBehaviour
     [Tooltip("Slug Audio Source")]
     AudioSource slugAudio;
 
-    private string FirstWord = "_ _ _ _ _ _ _ _ _";
-    private string SecondWord = "_ _ _ _ _ _ _ _ _";
-    private string ThirdWord = "_ _ _";
+    // private string FirstWord = "_ _ _ _ _ _ _ _ _";
+    // private string SecondWord = "_ _ _ _ _ _ _ _ _";
+    // private string ThirdWord = "_ _ _";
     //B e l o n g i n g              9 Letters
     //S o m e w h e r e              9 Letters
     //N e w                          3 Letters
@@ -39,7 +39,7 @@ public class ShowSongName : MonoBehaviour
     void Update()
     {
 
-        roomText.SetText(FirstWord + "    " + SecondWord + "    " + ThirdWord);
+        roomText.SetText(GlobalVariables.FirstWord + "    " + GlobalVariables.SecondWord + "    " + GlobalVariables.ThirdWord);
         /*
         BELONGING SOMEWHERE NEW
 
@@ -55,17 +55,17 @@ public class ShowSongName : MonoBehaviour
     {
         if(whichword == 1)
         {
-            FirstWord = foundword;
+            GlobalVariables.FirstWord = foundword;
             slugAudio.mute = false;
         }
         else if(whichword == 2)
         {
-            SecondWord = foundword;
+            GlobalVariables.SecondWord = foundword;
             chadAudio.mute = false;
         }
         else if(whichword == 3)
         {
-            ThirdWord = foundword;
+            GlobalVariables.ThirdWord = foundword;
             didiAudio.mute = false;
         }
 

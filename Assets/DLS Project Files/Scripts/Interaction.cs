@@ -16,6 +16,7 @@ public class Interaction : MonoBehaviour
     public string ConvoLose;
     public string ConvoWin;
     public string ConvoBye;
+    public string ConvoLoop;
     public int NPCValue;
 
     [SerializeField]
@@ -50,10 +51,35 @@ public class Interaction : MonoBehaviour
         pause = FindObjectOfType<PauseGame>();
         blackPanel.CrossFadeAlpha(0, 3f, false);
 
-        if(GlobalVariables.NPCDialogueValue[NPCValue] == 1)
-        {
-            GlobalVariables.NPCDialogueValue[NPCValue] = 0;
-        }
+        // if(GlobalVariables.NPCDialogueValue[NPCValue] == 2)
+        // {
+        //     CurrConvo = ConvoWin;
+        // }
+
+        // if(GlobalVariables.NPCDialogueValue[NPCValue] == 1)
+        // {
+        //     if(GlobalVariables.GameHasLooped)
+        //     {
+        //         GlobalVariables.NPCDialogueValue[NPCValue] = 3;
+        //     }
+        //     else
+        //     {
+        //         GlobalVariables.NPCDialogueValue[NPCValue] = 0;
+        //     }
+        // }
+
+        // Debug.Log("GameHasLooped is " + GlobalVariables.GameHasLooped);
+        // if(GlobalVariables.GameHasLooped)
+        // {
+        //     CurrConvo = ConvoLoop;
+        // }
+
+        // if(GlobalVariables.NPCDialogueValue[NPCValue] == 2)
+        // {
+        //     CurrConvo = ConvoWin;
+        // }
+        
+
         // diaRunner.AddCommandHandler<GameObject>("endconvo", EndConversation);
 
     }
@@ -91,6 +117,11 @@ public class Interaction : MonoBehaviour
                 }
             } 
         }
+
+        // if(NPCValue == 2)
+        // {
+        //     Debug.Log("GlobalVariables.NPCDialogueValue[NPCValue] is " + GlobalVariables.NPCDialogueValue[NPCValue]);
+        // }
 
         if(diaRunner.IsDialogueRunning)
         {
@@ -133,6 +164,10 @@ public class Interaction : MonoBehaviour
         {
             CurrConvo = ConvoWin;
         }
+        else if(GlobalVariables.NPCDialogueValue[NPCValue] == 3)
+        {
+            CurrConvo = ConvoLoop;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -164,6 +199,26 @@ public class Interaction : MonoBehaviour
         {
             GlobalVariables.NPCDialogueValue[npc] = 2;
         }
+        else if(dialoguevalue == "looped")
+        {
+            GlobalVariables.NPCDialogueValue[npc] = 3;
+        }
+
+        // if(dialoguevalue == "win")
+        // {
+        //     GlobalVariables.NPCDialogueValue[npc] = 2;
+        // }
+        // else
+        // {
+        //     if(dialoguevalue == "lose")
+        //     {
+        //         GlobalVariables.NPCDialogueValue[npc] = 1;
+        //     }
+        //     else if(dialoguevalue == "looped")
+        //     {
+        //         GlobalVariables.NPCDialogueValue[npc] = 3;
+        //     }
+        // }
     }
 
     [YarnCommand("resetscene")]
@@ -180,15 +235,15 @@ public class Interaction : MonoBehaviour
 
         // Outside Door Opening Sound
         SoundManager.instance.sound.PlayOneShot(SoundManager.instance.doorOpen2);
-
-
+        Debug.Log("GameHasLooped is " + GlobalVariables.GameHasLooped);
         // FadeAnimation.Play("BlackFadeAnimation");
         yield return new WaitForSecondsRealtime(1f);
         // blackPanel.SetActive(false);
         fpcscript.enabled = true;
 
         yield return new WaitForSecondsRealtime(0.1f);
-
+        // GlobalVariables.GameHasLooped = true;
+        Debug.Log("GameHasLooped is " + GlobalVariables.GameHasLooped);
         SceneManager.LoadScene(1);
     }
 }
