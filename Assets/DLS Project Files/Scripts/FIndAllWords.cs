@@ -26,7 +26,7 @@ public class FIndAllWords : MonoBehaviour
     {
         interaction = FindObjectOfType<Interaction>();
 
-        
+        credits.GetComponent<RawImage>().CrossFadeAlpha(0, 0f, true);  
     }
 
     // Update is called once per frame
@@ -44,6 +44,12 @@ public class FIndAllWords : MonoBehaviour
             StartCoroutine(StartEnding());
         }
 
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            GlobalVariables.AllFoundWords[0] = true;
+            GlobalVariables.AllFoundWords[1] = true;
+            GlobalVariables.AllFoundWords[2] = true;
+        }
 
     }
 
@@ -56,14 +62,27 @@ public class FIndAllWords : MonoBehaviour
 
         interaction.diaRunner.StartDialogue(talktonode);
 
+        // SceneManager.LoadScene(0);
+        // interaction.RestrictMovement = false;
+        // ResetGame(this.gameObject);
+    }
 
+    [YarnCommand("startcredits")]
+    IEnumerator StartCredits(GameObject gameobj)
+    {
+        Debug.Log("startcredits");
+        // yield return new WaitForSecondsRealtime(1f);
         credits.gameObject.SetActive(true);
         credits.GetComponent<RawImage>().CrossFadeAlpha(1, 2f, false);
         creditAnimation.Play("RollingCredits");
+        yield return new WaitForSecondsRealtime(20f);
+        credits.gameObject.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         GameManager.Instance.MainMenu();
-
     }
 
+    // <<resetgame FindAllWords this>>
     [YarnCommand("resetgame")]
     private void ResetGame(GameObject gameobj)
     {

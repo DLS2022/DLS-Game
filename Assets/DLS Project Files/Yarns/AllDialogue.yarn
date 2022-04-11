@@ -314,5 +314,5 @@ title: EndDialogue
 ---
 wowowow we know the song now
 you win
-<<resetgame FindAllWords this>>
+<<startcredits FindAllWords this>>
 ===
