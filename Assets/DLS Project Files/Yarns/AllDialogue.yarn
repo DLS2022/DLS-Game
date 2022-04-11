@@ -15,16 +15,19 @@ Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
         Jock: Damn, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
         ->You: Not really...
             Jock: Oh, sorry...
+            <<setnpcvalue PartyJockNPC this 0 lose>> 
         ->You: Being away from people in a quiet place.
             Jock: Oh, I can leave you alone if you want...
+            <<setnpcvalue PartyJockNPC this 0 lose>> 
         ->You: Music helps me calm down.
             Jock: Me too! It helps to sing what I’m feeling. I’m pretty fucking drunk!
             You: This song slaps!
             Jock: Yeah! It’s got a good beat!
             You: I’ve been trying to figure out what it’s called.
-            Jock:  Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
             <<setfoundwords MusicWordsFoundUI this SOMEWHERE 2>>
+            Jock:  Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
     -> You: It's alright...
+        <<setnpcvalue PartyJockNPC this 0 lose>> 
 -> You: Sure, I'll at least try a sip. 
     Jock: &@! yeah! Let's party. 
     Jock: So whatcha think? Want me to make another? 
@@ -33,7 +36,8 @@ Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
     -> You: Uhh, sure... Keep 'em coming. 
         Jock: You okay? Your face is turning a line-skittle color. 
         You: I don't feel so good. I'm gonna walk home. 
-        Jock: Oh, uh, alright dude. 
+        Jock: Oh, uh, alright dude.
+        <<setnpcvalue PartyJockNPC this 0 lose>> 
 ===
 
 title: JockLose
@@ -310,4 +314,5 @@ title: EndDialogue
 ---
 wowowow we know the song now
 you win
+<<resetgame FindAllWords this>>
 ===

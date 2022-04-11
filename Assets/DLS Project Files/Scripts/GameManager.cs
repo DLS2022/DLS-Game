@@ -46,4 +46,20 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void ResetGame()
+    {
+        GlobalVariables.AutoNode = "";
+        GlobalVariables.BathroomDialogueValue = 0;
+
+        for(int i = 0; i < GlobalVariables.NPCDialogueValue.Length; i++)
+        {
+            GlobalVariables.NPCDialogueValue[i] = 0;
+        }
+
+        for(int i = 0; i < GlobalVariables.AllFoundWords.Length; i++)
+        {
+            GlobalVariables.AllFoundWords[i] = false;
+        }
+    }
 }

@@ -46,4 +46,10 @@ public class FIndAllWords : MonoBehaviour
 
         interaction.diaRunner.StartDialogue(talktonode);
     }
+
+    [YarnCommand("resetgame")]
+    private void ResetGame(GameObject gameobj)
+    {
+        SceneManager.LoadScene(0);
+    }
 }
