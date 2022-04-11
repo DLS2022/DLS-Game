@@ -30,7 +30,6 @@ Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
     Jock: So whatcha think? Want me to make another? 
     -> You: I think if I have one more, I might go into a coma. 
         Jock: For sure, gotta pace yourself.
-        <<setnpcvalue PartyJockNPC this 0 win>>
     -> You: Uhh, sure... Keep 'em coming. 
         Jock: You okay? Your face is turning a line-skittle color. 
         You: I don't feel so good. I'm gonna walk home. 
@@ -305,4 +304,10 @@ title: GoOutside
 -> Yes
     <<resetscene OutsideDoor this>>
 -> No
+===
+
+title: EndDialogue
+---
+wowowow we know the song now
+you win
 ===

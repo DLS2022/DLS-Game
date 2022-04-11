@@ -28,7 +28,7 @@ public class Interaction : MonoBehaviour
 
     [SerializeField]
     [Tooltip("UI FADE TO BLACK PANEL")]
-    Image blackPanel;
+    public Image blackPanel;
 
     public DialogueRunner diaRunner;
 
@@ -152,6 +152,7 @@ public class Interaction : MonoBehaviour
         diaRunner.StartDialogue(CurrConvo);
     }
 
+    // example: <<setnpcvalue PartyJockNPC this 0 win>>
     [YarnCommand("setnpcvalue")]
     private void SetNPCValue(GameObject gameobj, int npc , string dialoguevalue)
     {
