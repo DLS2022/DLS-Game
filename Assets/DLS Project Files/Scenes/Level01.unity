@@ -1735,7 +1735,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2383216c7b8425e4db0c79c1ab5e40e0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 93e612c97c6a3d6489951bec144f0da0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -1745,7 +1745,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 1
-  MinDistance: 5
+  MinDistance: 1.7
   MaxDistance: 14
   Pan2D: 0
   rolloffMode: 0
@@ -5445,7 +5445,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4615516a4c332e94f8b735e173a42fcf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bfd1c679f1c5bbd4ab34ca96d70992a3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5455,7 +5455,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 1
-  MinDistance: 5
+  MinDistance: 1.7
   MaxDistance: 14
   Pan2D: 0
   rolloffMode: 0
@@ -6686,7 +6686,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b8b32e118371724591e49c1ea6ebe02, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fa2ee0801808c2f489f1d8bb1c70e384, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6696,7 +6696,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 1
-  MinDistance: 5
+  MinDistance: 1.7
   MaxDistance: 14
   Pan2D: 0
   rolloffMode: 0
@@ -7167,7 +7167,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b8b32e118371724591e49c1ea6ebe02, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f1422c619c0216041b481db0ecf731da, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7177,7 +7177,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 1
-  MinDistance: 5
+  MinDistance: 1.7
   MaxDistance: 14
   Pan2D: 0
   rolloffMode: 0
@@ -7455,6 +7455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4ec5f7409ed084c8ae37ff7cccb390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creditAnimation: {fileID: 1942581740}
+  credits: {fileID: 879161326}
   talktonode: EndDialogue
 --- !u!4 &1994893189
 Transform:

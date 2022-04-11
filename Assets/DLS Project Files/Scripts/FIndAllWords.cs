@@ -8,6 +8,14 @@ using UnityEngine.UI;
 
 public class FIndAllWords : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("The Credits Animator")]
+    Animator creditAnimation;
+
+    [SerializeField]
+    [Tooltip("The Credits Image")]
+    GameObject credits;
+
 
     Interaction interaction;
     bool IsCoroutineRunning;
@@ -17,6 +25,8 @@ public class FIndAllWords : MonoBehaviour
     void Awake()
     {
         interaction = FindObjectOfType<Interaction>();
+
+        
     }
 
     // Update is called once per frame
@@ -45,6 +55,13 @@ public class FIndAllWords : MonoBehaviour
         yield return new WaitForSecondsRealtime(2f);
 
         interaction.diaRunner.StartDialogue(talktonode);
+
+
+        credits.gameObject.SetActive(true);
+        credits.GetComponent<RawImage>().CrossFadeAlpha(1, 2f, false);
+        creditAnimation.Play("RollingCredits");
+        GameManager.Instance.MainMenu();
+
     }
 
     [YarnCommand("resetgame")]

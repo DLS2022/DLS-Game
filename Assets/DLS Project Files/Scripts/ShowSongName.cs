@@ -56,17 +56,17 @@ public class ShowSongName : MonoBehaviour
         if(whichword == 1)
         {
             FirstWord = foundword;
-            chadAudio.mute = false;
+            slugAudio.mute = false;
         }
         else if(whichword == 2)
         {
             SecondWord = foundword;
-            didiAudio.mute = false;
+            chadAudio.mute = false;
         }
         else if(whichword == 3)
         {
             ThirdWord = foundword;
-            slugAudio.mute = false;
+            didiAudio.mute = false;
         }
 
         GlobalVariables.AllFoundWords[whichword-1] = true;
