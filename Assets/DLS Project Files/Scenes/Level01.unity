@@ -6307,9 +6307,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 865758701, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoBye
+      value: Bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 865758701, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoWin
+      value: Bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 865758701, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: NPCValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865758701, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: roomText
       value: 
       objectReference: {fileID: 1545410219}
+    - target: {fileID: 865758701, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLose
+      value: Bedroom
+      objectReference: {fileID: 0}
     - target: {fileID: 865758701, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: blackPanel
       value: 
@@ -6318,6 +6334,22 @@ PrefabInstance:
       propertyPath: spaceBarImage
       value: 
       objectReference: {fileID: 1056215474}
+    - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoBye
+      value: BathroomDoorLocked
+      objectReference: {fileID: 0}
+    - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoWin
+      value: BathroomDoorLocked
+      objectReference: {fileID: 0}
+    - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: NPCValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLose
+      value: BathroomDoorLocked
+      objectReference: {fileID: 0}
     - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: blackPanel
       value: 
@@ -6330,6 +6362,22 @@ PrefabInstance:
       propertyPath: spaceBarImage
       value: 
       objectReference: {fileID: 1056215474}
+    - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoBye
+      value: GoOutside
+      objectReference: {fileID: 0}
+    - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoWin
+      value: GoOutside
+      objectReference: {fileID: 0}
+    - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: NPCValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLose
+      value: GoOutside
+      objectReference: {fileID: 0}
     - target: {fileID: 999942372, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: blackPanel
       value: 
