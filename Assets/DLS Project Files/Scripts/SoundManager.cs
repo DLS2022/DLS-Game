@@ -5,7 +5,15 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
+
     public AudioSource sound;
+    public AudioSource chadAudio;
+
+    public AudioSource didiAudio;
+
+    public AudioSource slugAudio;
+
+
     public AudioClip doorOpen;
     public AudioClip doorOpen2;
     public AudioClip doorRattle;
@@ -15,10 +23,22 @@ public class SoundManager : MonoBehaviour
     public AudioClip basicUI;
     public AudioClip StartGameUI;
 
+    
 
     private void Awake()
     {
-        instance = this;
-        sound = Instantiate(sound);
+        
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }
+
+
+
     }
 }

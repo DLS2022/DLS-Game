@@ -113,7 +113,12 @@ public class Interaction : MonoBehaviour
 
                 if (this.gameObject.tag == ("BathroomDoor") || (this.gameObject.tag == ("Bedroom")))
                 {
+                    SoundManager.instance.sound.volume = .6f;
                     SoundManager.instance.sound.PlayOneShot(SoundManager.instance.doorRattle);
+                }
+                else
+                {
+                    SoundManager.instance.sound.volume = 1f;
                 }
             } 
         }
