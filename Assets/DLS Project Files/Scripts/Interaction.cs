@@ -69,10 +69,10 @@ public class Interaction : MonoBehaviour
          }
 
         // Debug.Log("GameHasLooped is " + GlobalVariables.GameHasLooped);
-        // if(GlobalVariables.GameHasLooped)
-        // {
-        //     CurrConvo = ConvoLoop;
-        // }
+        if(GlobalVariables.GameHasLooped)
+        {
+            CurrConvo = ConvoLoop;
+        }
 
         // if(GlobalVariables.NPCDialogueValue[NPCValue] == 2)
         // {

@@ -79,7 +79,7 @@ public class FIndAllWords : MonoBehaviour
         credits.gameObject.SetActive(false);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        GameManager.Instance.MainMenu();
+        SceneManager.LoadScene(0);
     }
 
     // <<resetgame FindAllWords this>>

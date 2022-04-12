@@ -12,7 +12,7 @@ Chad: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
     Chad: For sure, gotta pace yourself.
     Chad: So how are you enjoying the party?
     -> You: I'm a bit anxious.
-        Chad: Damn, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
+        Chad: ?@^%, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
         ->You: Not really...
             Chad: Oh, sorry...
             <<setnpcvalue PartyJockNPC this 0 lose>> 
@@ -20,12 +20,15 @@ Chad: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
             Chad: Oh, I can leave you alone if you want...
             <<setnpcvalue PartyJockNPC this 0 lose>> 
         ->You: Music helps me calm down.
-            Chad: Me too! It helps to sing what I’m feeling. I’m pretty fucking drunk!
-            You: This song slaps!
-            Chad: Yeah! It’s got a good beat!
+            Chad: Me too! It helps to sing what I’m feeling. 
+            Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] I’m pretty fucking drunk! 
+            You: Have you been listening to the music playing? I really like this song.
+            Chad: Yeah! This beat slaps!
             You: I’ve been trying to figure out what it’s called.
             <<setfoundwords MusicWordsFoundUI this SOMEWHERE 2>>
             Chad:  Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+            <i> The song is certainly starting to sound much less fuzzy than their memory of it...
+            <<setnpcvalue PartyJockNPC this 0 win>> 
     -> You: It's alright...
         <<setnpcvalue PartyJockNPC this 0 lose>> 
 -> You: Sure, I'll at least try a sip. 
@@ -40,14 +43,97 @@ Chad: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
         <<setnpcvalue PartyJockNPC this 0 lose>> 
 ===
 
+title: JockSecond
+---
+You: Hey… You still making those Sugar Blasts?
+
+Chad: Heck yeah! Hey, how did ya know what they were called?
+
+-> You: You told me about it already…
+   Chad: Oh, $*?%. Guess I'm a little more buzzed than I thought… So you wanna get Sugar Blasted with me?
+    -> You: I think I’ll stick to water for now.
+        Chad: For sure, gotta pace yourself.
+        Chad: So how are you enjoying the party?
+        -> You: I'm a bit anxious.
+                Chad: ?@^%, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
+                ->You: Not really...
+                    Chad: Oh, sorry...
+                    <<setnpcvalue PartyJockNPC this 0 lose>> 
+                ->You: Being away from people in a quiet place.
+                    Chad: Oh, I can leave you alone if you want...
+                    <<setnpcvalue PartyJockNPC this 0 lose>> 
+                ->You: Music helps me calm down.
+                    Chad: Me too! It helps to sing what I’m feeling. 
+                    Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] I’m pretty fucking drunk! 
+                    You: Have you been listening to the music playing? I really like this song.
+                    Chad: Yeah! This beat slaps!
+                    You: I’ve been trying to figure out what it’s called.
+                    <<setfoundwords MusicWordsFoundUI this SOMEWHERE 2>>
+                    Chad:  Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+                    <i> The song is certainly starting to sound much less fuzzy than their memory of it...
+    -> You: Sure, I’ll at least try a sip.
+        Chad: &@! yeah! Let's party. 
+        Chad: So whatcha think? Want me to make another? 
+        -> You: I think if I have one more, I might go into a coma. 
+                Chad: For sure, gotta pace yourself.
+        -> You: Uhh, sure... Keep 'em coming. 
+                Chad: You okay? Your face is turning a line-skittle color. 
+                You: I don't feel so good. I'm gonna walk home. 
+                Chad: Oh, uh, alright dude.
+                <<setnpcvalue PartyJockNPC this 0 lose>> 
+-> You: Uhh… my grandma makes them all the time?
+    Chad: That's sick! What's her recipe?
+    -> You: Chocolate vodka, whipped cream and grated nutmeg on top.
+        Chad: Nah, that’s not it, man. That’s not a real Sugar Blast.
+        <<setnpcvalue PartyJockNPC this 0 lose>>
+    -> You: Two shots of tequila, a handful of skittles, whipped cream and some other stuff.
+        Chad: ?@^%, your grandma is rad! You better invite her to the next rager! What else is she into, BMX??
+        -> You: Oh yeah, she's really into that.
+                Chad: Oh, come on! That was a joke! You don't have to try that hard to impress me. I'm a pretty impressible guy.
+        -> You: Knitting and collecting plates with dogs on them.
+            Chad: She parties and knits?! That's great! You know, knitting takes such a long time and so does recovering from a hangover, I'm surprised she has time for anything else.
+            -> You: Well, she also has a recipe for a hangover cure.
+                Chad: What is it?
+                -> You: Sorry, it's a secret recipe...
+                    Chad: Aw, come on! You can't just tell me there's a secret for hangovers out there and then not give it to me...
+                    <<setnpcvalue PartyJockNPC this 0 lose>>
+                -> You: It's a biscuits and gravy recipe, though I'd have to ask for all the ingredients.
+                    Chad: That makes so much sense! I bet all the grease just soaks up the alcohol! You've gotta invite me to your grandma's for breakfast sometime.
+                    -> You: Haha, sure!
+                        Chad: I'd definitely owe you one!
+                        You: Have you been listening to the music playing? I really like this song.
+                            Chad: Yeah! This beat slaps!
+                            You: I’ve been trying to figure out what it’s called.
+                            <<setfoundwords MusicWordsFoundUI this SOMEWHERE 2>>
+                            Chad: Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+                            <i> The song is certainly starting to sound much less fuzzy than their memory of it...
+                    -> You: Uh... probably not...
+                        Chad: Oh, uh, okay... I was just kidding anyways...
+                        <<setnpcvalue PartyJockNPC this 0 lose>>
+            -> You: Do you... knit?
+                Chad: What? No! Maybe! I'm not very good...
+                ->You: I wouldn't have expected you to be into knitting...
+                    Chad: Well, I wouldn't have expected you to be so mean about it!
+                    <<setnpcvalue PartyJockNPC this 0 lose>>
+                -> You: Well, when you get better at it could you make me a scarf?
+                    Chad: Sure thing, dude!
+                    You: Have you been listening to the music playing? I really like this song.
+                        Chad: Yeah! This beat slaps!
+                        You: I’ve been trying to figure out what it’s called.
+                        <<setfoundwords MusicWordsFoundUI this SOMEWHERE 2>>
+                        Chad: Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+                        <i> The song is certainly starting to sound much less fuzzy than their memory of it...
+
+===
+
 title: JockLose
 ---
-Chad: Man, I’m a bit bummed now… Gotta get the good vibes back
+Jock: Man, I’m a bit bummed now… Gotta get the good vibes back
 ===
 
 title: JockWin
 ---
-Chad: You’re the bomb, dude!
+Jock: You’re the bomb, dude!
 ===
 
 title: MomFirst
@@ -56,27 +142,57 @@ You: Hi…
 Didi: Hey there! I'm Didi! How are ya? Had some water recently?
 -> You: Oh, I don’t need water… I’m staying sober for this one.
     Didi: Sober people need water too. I mean, I'm the designated driver and I've probably had 24 ounces since I got here. You should go get some.
-    
+    <<setnpcvalue PartyMomNPC this 1 lose>>
 -> You: Yep, got my own hydroflask.
     Didi: Ooh, I love the stickers! Look at this! I’ve got a bunch on my phone!
     -> You: That avocado sticker is cool!
         Didi: Oh $*?%! That reminds me! I've gotta make sure there's enough guac out! I mean, I'm not the host or anything, but I have absolutely no qualms about rifling through soemone's fridge. Sorry, I've gotta go find the snack table.
     -> You: The little cat is very cute!
-        Didi: Well, I gotta have a kitty sticker! I'm a parent of two myself... cats, that is. Though, I babysit on weekends. Mostly Chad.
+        Didi: Well, I gotta have a kitty sticker! I'm a parent of two myself... cats, that is. Though, I babysit on weekends. Mostly Chad. Sometimes Slug...
         -> You: Who is Chad and why do they need babysitting?
             Didi: The person making those disgusting cocktails...
             -> You: Disgusting cocktails? Guess I'll have to try one.
                 Didi: I'm not cleaning up after you if you end up puking in the silverware drawer! I'm still not over the one and only time that has ever happened to me...
                 -> You: Ew, that's disgusting. Whoever made you clean that up sucks
                     Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                    <<setnpcvalue PartyMomNPC this 1 lose>>
                 -> You: I promise I won't do that...
                     Didi: They all say that.
+                    <<setnpcvalue PartyMomNPC this 1 lose>>
             -> You: I'm pretty sure I've met them. That checks out...
                 Didi: Hey, only I'm allowed to say mean things about my friends!
+                <<setnpcvalue PartyMomNPC this 1 lose>>
             -> You: Ohhh...I was talking to them earlier. They seem like they know what's up.
                 Didi: You know, Chad might seem like some silly, confident party animal, but they're a little kitten with a big heart under all of that. You know, I switched out their tequila with water after the second shot. They're kinda a lightweight, but they like keeping up with everyone else.
                 -> You: That seems like a lot of work for you...
                     Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                    <<setnpcvalue PartyMomNPC this 1 lose>>
+                -> You: You're a good friend.
+                    Didi: Thanks! I try.
+                    You: Hey, you wanna help me out with something?
+                    Didi: Of course! I'm always here to help a friend in need!
+                    You: I'm a friend?
+                    Didi: Sure! I'm always looking for more people for me to bestow my wise words -or snacks- upon. And sometimes, though I know I may not seem like it, I like to have someone to lean on too.
+                    You: Do you know the name of this song that's playing?
+                    <<setfoundwords MusicWordsFoundUI this NEW 3>>
+                    Didi: Let me think... I'm sorry, I don't think I know the name. I'm pretty sure it's a pretty NEW song.
+                    You: Thanks anyways!
+                    <<setnpcvalue PartyMomNPC this 1 win>> 
+                    <i> The song is becoming a little less muddled by the party sounds around you...
+        -> You: Who is Slug and why do they need babaysitting?
+                Didi: She's the person spewing fun facts and puns all the time. A real animal lover, but I wouldn't put her in charge of anything alive...
+                -> You: Interesting... animal facts and puns? Why is that her thing?
+                    Didi: You'd have to go ask her.
+                    You: Oh, okay... I guess I will.
+                -> You: I'm pretty sure I've met her. That checks out... She seems a bit all over the place...
+                    Didi: Hey, only I'm allowed to say mean things about my friends!
+                    <<setnpcvalue PartyMomNPC this 1 lose>>
+                -> You: Ohhh...I was talking to her earlier. I liked her jokes!
+                    Didi: You know, Slug might seem like some silly, confident jokester, but she's just a little kitten with a big heart under all of that. Sometimes she gets a bit anxious at parties... You know, tonight she didn't even want to come, but I spent about an hour talking through a pro and con list and she finally agreed to come out with us. Sometimes she just needs a push. And when she finally comes out of her shell, she can be a real wild animal. I'm the one who pushes her out there, and then I've gotta reel her back in at the end of the night.
+                    -> You: That seems like a lot of work for you...
+                        Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                        <<setnpcvalue PartyMomNPC this 1 lose>>
+                    
                 -> You: You're a good friend.
                     Didi: Thanks! I try.
                     You: Hey, you wanna help me out with something?
@@ -88,20 +204,24 @@ Didi: Hey there! I'm Didi! How are ya? Had some water recently?
                     Didi: Let me think... I'm sorry, I don't think I know the name. I'm pretty sure it's a pretty NEW song.
                     You: Thanks anyways!
                     <i> The song is becoming a little less muddled by the party sounds around you...
+                    <<setnpcvalue PartyMomNPC this 1 win>> 
 -> You: Oh, shoot! I should probably get some…
     Didi: I’ve got you covered! I always carry a water bottle in my bag. Sometimes it comes in handy basically packing for a three day vacation every time I leave the house. Though my tendency to have a two ton bag is gonna send me to a chiropractor someday…
     -> You: Have you ever considered *not* bringing that much to a party?
         Didi: Considered? Many times. Attempted? Only once. It was a disaster. The host didn't get enough snacks and we sent the drunkest of everyone to go to a conveiniece store. She didn't come back until and hour later and had apparently forgotten what she was doing and took a walk to the ocean and back. We were two miles from the ocean! Chad threw up in the silverware drawer... We don't talk about the bagless night...
         -> You: Ew, I would have just left at that point...
             Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+            <<setnpcvalue PartyMomNPC this 1 lose>>
         -> You: I've gotta know more about this disaster of a party.
             Didi: I'm sorry, that's all the detail I can give you. We. Do. Not. Talk. About. That. Night.
+            <<setnpcvalue PartyMomNPC this 1 lose>>
         -> You: How does someone manage to throw up in a silverware drawer?
             Didi: They thought the silverware drawer handle was the handle to the compartment below the sink where the trashcan was. They made a valiant effort and if I had just had my bag (which always has a few paper bags in it)... we could have avoided it. Anyways! No more talking about that night! I've already said too much... If you run into Chad tonight, could you not tell them we talked about it?
-            -> Sure thing. Don't want to bring up bad memories.
+            -> You: Sure thing. Don't want to bring up bad memories.
                 Didi: You know, Chad might seem like some silly, confident party animal, but they're a little kitten with a big heart under all of that. You know, I switched out their tequila with water after the second shot. They're kinda a lightweight, but they like keeping up with everyone else.
                 -> You: That seems like a lot of work for you...
                     Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                    <<setnpcvalue PartyMomNPC this 1 lose>>
                 -> You: You're a good friend.
                     Didi: Thanks! I try.
                     You: Hey, you wanna help me out with something?
@@ -113,19 +233,46 @@ Didi: Hey there! I'm Didi! How are ya? Had some water recently?
                     Didi: Let me think... I'm sorry, I don't think I know the name. I'm pretty sure it's a pretty NEW song.
                     You: Thanks anyways!
                     <i> The song is becoming a little less muddled by the party sounds around you...
+                    <<setnpcvalue PartyMomNPC this 1 win>> 
             -> You: That doesn't sound so bad...
                 Didi: Well, I guess you just had to be there.
                 -> You: I guess so...
+                <<setnpcvalue PartyMomNPC this 1 lose>>
+        -> You: She walked all the way to the ocean and back?!
+                Didi: Yeah, Slug was getting a bit restless at the party. Slug is the name of my friend, by the way. So, I enlisted her to get the snacks... not knowing how &*@!ed up she was... I thought a bit of fresh air would help. I guess I was right, but she needed a lot more than I thought she would. So she went all the way to the ocean and managed to bring back a bunch of sand crabs that she was holding by using her shirt like a bucket. Slug was covered in dirt and seaweed! We had to find a vase at the party to put the sand crabs in water. The next day, we went to the beach and let them go... and dropped the vase off at the front door of the house that the party was at.
+            -> You: Wow, it sounds like you really had your hands full at that party...
+                Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                <<setnpcvalue PartyMomNPC this 1 lose>>
+            -> You: I definitely get needing a little fresh air...
+                Didi: You know, Slug might seem like some silly, confident jokester, but she's just a little kitten with a big heart under all of that. Sometimes she gets a bit anxious at parties... You know, tonight she didn't even want to come, but I spent about an hour talking through a pro and con list and she finally agreed to come out with us. Sometimes she just needs a push. And when she finally comes out of her shell, she can be a real wild animal. I'm the one who pushes her out there, and then I've gotta reel her back in at the end of the night.
+                -> You: That seems like a lot of work for you...
+                        Didi: My friends might be a bit chaotic, but you've gotta stick around for people you care about. I'd never just leave someone hanging...
+                    <<setnpcvalue PartyMomNPC this 1 lose>>
+                -> You: You're a good friend.
+                    Didi: Thanks! I try.
+                    You: Hey, you wanna help me out with something?
+                    Didi: Of course! I'm always here to help a friend in need!
+                    You: I'm a friend?
+                    Didi: Sure! I'm always looking for more people for me to bestow my wise words -or snacks- upon. And sometimes, though I know I may not seem like it, I like to have someone to lean on too.
+                    You: Do you know the name of this song that's playing?
+                    <<setfoundwords MusicWordsFoundUI this NEW 3>>
+                    Didi: Let me think... I'm sorry, I don't think I know the name. I'm pretty sure it's a pretty NEW song.
+                    You: Thanks anyways!
+                    <i> The song is becoming a little less muddled by the party sounds around you...
+                    <<setnpcvalue PartyMomNPC this 1 win>> 
     -> You: Just get yourself a few pack mules and that'll solve the back problem.
-        Didi: You are a fucking genius! Who do you think I should recruit?
+        Didi: You are a &*@!ing genius! Who do you think I should recruit?
         -> You: Definitely the person making the weird cocktails.
             Didi: Haha! Chad? Why him?
-            -> You: He seems like he has his shit together. To give him something better to do than making those gross drinks.
+            -> You: He seems like he has his $*?% together. To give him something better to do than making those gross drinks.
                 Didi: Hey, only I'm allowed to say mean things about my friends!
+                <<setnpcvalue PartyMomNPC this 1 lose>>
         -> You: Well, I could help you with it.
-            Didi: Um, no thank you. No way in hell I'm trusting someone else with this resposibility! What if someone gets hurt? Do you know how to put a Dora band-aid on someone properly? Can you tell exactly what snack someone would like just by looking at them? I don't think so...
+            Didi: Um, no thank you. No way in &@!! I'm trusting someone else with this resposibility! What if someone gets hurt? Do you know how to put a Dora band-aid on someone properly? Can you tell exactly what snack someone would like just by looking at them? I don't think so...
+            <<setnpcvalue PartyMomNPC this 1 lose>>
     -> You: Whoa, two tons?! I can help you with that for a minute.
-        Didi: Um, no thank you. No way in hell I'm trusting someone else with this resposibility! What if someone gets hurt? Do you know how to put a Dora band-aid on someone properly? Can you tell exactly what snack someone would like just by looking at them? I don't think so...
+        Didi: Um, no thank you. No way in &@!! I'm trusting someone else with this resposibility! What if someone gets hurt? Do you know how to put a Dora band-aid on someone properly? Can you tell exactly what snack someone would like just by looking at them? I don't think so...
+        <<setnpcvalue PartyMomNPC this 1 lose>>
 ===
 
 title: MomLose
@@ -143,27 +290,32 @@ title: PunFirst
 You: Hey there!
 Slug: Hiya! I'm Sloane, but my friends call me Slug!
 -> You: Sloane is a nice name!
-    <<setnpcvalue PunnyBoyNPC this 2 lose>>
     Slug: I guess... but I personally like Slug better...
+    <<setnpcvalue PunnyBoyNPC this 2 lose>>
 -> You: Why do they call you Slug?
     Slug: I used to be all curled up in a shell... Just a tiny little snail... Then I crawled out and now I'm here! Just buggin' around!
     -> I don't think that's how slugs work...
         Slug: If anyone would know how slugs work, it'd be me! I mean, I am Slug!
         You: Okay, whatever you say...
+        <<setnpcvalue PunnyBoyNPC this 2 lose>>
     -> You: Bugs are pretty cool!
         Slug: Yeah, I'm kind of a bug fanatic. I don't get why people are afraid of spiders or think bugs are gross. Even roaches have a place in my heart.
         -> You: Actually, I'm kind of afriad of spiders...
             Slug: That's too bad... They aren't trying to hurt anybody... How would you feel if someone yelled at you and tried to squish you when you were just vibin'?
             You: Not good, I guess...
+            <<setnpcvalue PunnyBoyNPC this 2 lose>>
         -> You: Okay, but roaches? They're a little gross...
             Slug: That's not cool! Roaches aren't gross! They're part of the ecosystem... I actually think they're cute.
             You: Oh... sorry...
+            <<setnpcvalue PunnyBoyNPC this 2 lose>>
         -> You: Me too! I was a total animal kid growing up.
             Slug: Aww, cute! I can totally see that! Speaking of animals, wanna hear a joke?
             -> You: No thanks.
                 Slug: Oh... okay... fine...
+                <<setnpcvalue PunnyBoyNPC this 2 lose>>
             -> You: Uh... I guess?
                 Slug: You don't have to pretend to be interested...
+                <<setnpcvalue PunnyBoyNPC this 2 lose>>
             -> You: Yeah!
                 Slug: Yay! Okay, here it is! How are a cat and a sentence different?
                 -> You: Hmm… I don’t know…
@@ -172,8 +324,10 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                         Slug: I've got more if you want another!
                         -> You: I think I'm all joked out
                             Oh... okay... fine...
+                            <<setnpcvalue PunnyBoyNPC this 2 lose>>
                         -> You: Uh... I guess?
                             You don't have to pretend to be interested...
+                            <<setnpcvalue PunnyBoyNPC this 2 lose>>
                         -> You: Let me hear it!
                             Slug: What has T in the beginning, T in the middle, and T at the end?
                             You: Uhhh, I have no idea...
@@ -181,21 +335,23 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                             -> You: Ohhh... A teapot... right...
                                 Slug: You don't have to pretend to get it just to spare my feelings...
                                 You: Oh, okay...
+                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
                             -> You: Wait... I don't get it...
                                 Slug: It’s cuz the word “teapot” starts with a T and ends with a T and inside of it there's… you know what… nevermind…
+                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
                     -> You: Wow, that's pretty bad...
                         Slug: Well, I guess you just don't have a sense of humor!
+                        <<setnpcvalue PunnyBoyNPC this 2 lose>>
                 -> You: One’s fuzzy?
                     Slug: Come on! Everyone knows you’re not really supposed to try to answer when someone is telling you a joke.
+                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
     -> You: I don't know if I'd wanna be a bug. I don't think they even have brains...
         Slug: What are you talking about? Bugs for sure have brains! They're smart little guys! Most of them even have brains that are spread out all over their body! They might have tiny brains, but you shouldn't discredit them just cuz they're small...
         You: Oh, uh... sorry...
+        <<setnpcvalue PunnyBoyNPC this 2 lose>>
 -> You: That's not very nice of them...
     Slug: Well it's not very nice of you to assume I don't like being called Slug. Slugs are &*@!ing awesome!
--> TESTER CHOICE TO GET WORD BC THERE'S NO OTHER WAY RN
-    <<setfoundwords MusicWordsFoundUI this BELONGING 1>>
-    <<setnpcvalue PunnyBoyNPC this 2 win>>
-    THE WORD IS BELONGING
+    <<setnpcvalue PunnyBoyNPC this 2 lose>>
 ===
 
 title: PunLose
@@ -214,25 +370,31 @@ You: Hey there!
 Slug: Hiya! I'm Sloane, but my friends call me Slug!
 -> You: Sloane is a nice name!
     Slug: I guess... but I personally like Slug better...
+    <<setnpcvalue PunnyBoyNPC this 2 lose>>
 -> You: Why do they call you Slug?
     Slug: I used to be all curled up in a shell... Just a tiny little snail... Then I crawled out and now I'm here! Just buggin' around!
     -> I don't think that's how slugs work...
         Slug: If anyone would know how slugs work, it'd be me! I mean, I am Slug!
         You: Okay, whatever you say...
+        <<setnpcvalue PunnyBoyNPC this 2 lose>>
     -> Bugs are pretty cool!
         Slug: Yeah, I'm kind of a bug fanatic. I don't get why people are afraid of spiders or think bugs are gross. Even roaches have a place in my heart.
         -> You: Actually, I'm kind of afraid of spiders...
             Slug: That's too bad... They aren't trying to hurt anybody... How would you feel if someone yelled at you and tried to squish you when you were just vibin'?
             You: Not good, I guess...
+            <<setnpcvalue PunnyBoyNPC this 2 lose>>
         -> You: Okay, but roaches? They're a little gross...
             Slug: That's not cool! Roaches aren't gross! They're part of the ecosystem... I actually think they're cute.
             You: Oh... sorry...
+            <<setnpcvalue PunnyBoyNPC this 2 lose>>
         -> You: Me too! I was a total animal kid growing up.
             Slug: Aww, cute! I can totally see that! Speaking of animals, wanna hear a joke?
             -> You: No thanks.
                 Slug: Oh... okay... fine...
+                <<setnpcvalue PunnyBoyNPC this 2 lose>>
             -> You: Uh... I guess?
                 Slug: You don't have to pretend to be interested...
+                <<setnpcvalue PunnyBoyNPC this 2 lose>>
             -> You: Yeah!
                 Slug: Yay! Okay, here it is! How are a cat and a sentence different?
                 ->Hmm... I don't know...
@@ -241,8 +403,10 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                             I've got more if you want another!
                             -> You: I think I'm all joked out
                                 Slug: Oh... okay... fine...
+                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
                             -> You: Uh... I guess?
                                 Slug: You don't have to pretend to be interested...
+                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
                             -> You: Let me hear it!
                                 Slug: What has T in the beginning, T in the middle, and T at the end?
                                 You: Uhhh, I have no idea...
@@ -250,15 +414,20 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                                 -> You: Ohhh... A teapot... right...
                                     Slug: You don't have to pretend to get it just to spare my feelings...
                                     You: Oh, okay...
+                                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
                                 -> You: Wait... I don't get it...
                                     Slug: It’s cuz the word “teapot” starts with a T and ends with a T and inside of it there's… you know what… nevermind…
+                                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
                         -> You: Wow, that's pretty bad...
                             Slug: Well, I guess you just don't have a sense of humor!
+                            <<setnpcvalue PunnyBoyNPC this 2 lose>>
                 ->One's fuzzy?
                     Slug: Come on! Everyone knows you’re not really supposed to try to answer when someone is telling you a joke.
+                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
     -> I don't know if I'd wanna be a bug. I don't think they even have brains...
         Slug: What are you talking about? Bugs for sure have brains! They're smart little guys! Most of them even have brains that are spread out all over their body! They might have tiny brains, but you shouldn't discredit them just cuz they're small...
         You: Oh, uh... sorry...
+        <<setnpcvalue PunnyBoyNPC this 2 lose>>
 -> You: Dude, I love slugs!
     Slug: Really! That's sick! A lot of people think they're gross...
     You: Not me! I was a real animal lover as a kid!
@@ -267,28 +436,33 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
         Slug: Alright. Did you know that the tongue of a whale weighs more than an elephant?!
         -> You: Yeah, I knew that!
             Slug: Oh... I thought that would be a fun fact, but I guess it was just a boring fact...
+            <<setnpcvalue PunnyBoyNPC this 2 lose>>
         -> You: No way!
             Slug: Yes way! Also! Sea otters hold each other's paws to keep themselves from drifting off! Isn't that adorable? Oh! That reminds me! Wanna hear a joke?
             -> You: Of course!
                 Slug: Okay. Here it is. I got invited to a wedding at the zoo but I didn't take a plus one cuz I don’t have a significant otter.
                     -> You: ...Haha.
                         Slug: Oh, come on! That was funny!
+                        <<setnpcvalue PunnyBoyNPC this 2 lose>>
                     -> You: I've got a joke for you!
                         Slug: %@!! yeah! I love jokes!
                         You: Alright, here it is...
                         -> You: I can tell you a pun about the wind, but it kinda blows…
                             Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
                             You: Oh, I guess you're right...
+                            <<setnpcvalue PunnyBoyNPC this 2 lose>>
                         -> You: Why aren’t dogs good dancers?
                             Slug: Oh! I know this one! They have two left feet!
                             -> You: Oh... I guess I'm not very good at this...
                                 Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
                                 You: Oh, I guess you're right...
+                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
                             -> You: You got it!
                                 Slug: Haha, you can't out-pun the punster!
                                 -> You: What's a punster?
                                     Slug: Pun. Master. Punster. C'mon, keep up!
                                     You: Oh, sorry I guess I'm just a little slower than you at words...
+                                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
                                 -> You: I bet I can! Give me a pun!
                                     Slug: What did the snail say when it went to a French restaurant?
                                     -> You: Hmm... I give up... I don't know...
@@ -296,6 +470,7 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                                         -> You: I guess I'm not as good at this as I thought...
                                             Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
                                             You: Oh, I guess you're right...
+                                            <<setnpcvalue PunnyBoyNPC this 2 lose>>
                                     -> You: What a way to escargot!
                                         Slug: Hey! You're not too bad at this! You're turn!
                                             -> You: You know, I think I'm actually all out...
@@ -303,6 +478,7 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                                                     -> You: Yeah, I guess I'm not too good at this...
                                                         Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
                                                         You: Oh, I guess you're right...
+                                                        <<setnpcvalue PunnyBoyNPC this 2 lose>>
                                                     -> You: I bow down to the pun master!
                                                         Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
                                                         You: So how did you aquire the title of punster?
@@ -314,12 +490,14 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                                                         Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
                                                         You: Me too!
                                                         <i> Interesting...The song almost sounds...clearer?
+                                                        <<setnpcvalue PunnyBoyNPC this 2 win>>
                                             -> You: Alright. What did the rabbit say to his fiancé?
                                                 Slug: Let's go on a bunnymoon!!
                         -> You: Uhh... I actually can't think of one...
                             -> You: Actually, I was gonna say "I carrot about you" but yours is better...
                                 Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
                                 You: Oh, I guess you're right...
+                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
                             -> You: Man you're good at this!
                                 Slug: Okay, okay. One last one. How much money does a pirate pay for corn?
                                 -> You: I can't even guess this one. I'm all punned out...
@@ -327,6 +505,7 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                                     -> Yeah, I guess I'm not too good at this...
                                         Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
                                         You: Oh, I guess you're right...
+                                        <<setnpcvalue PunnyBoyNPC this 2 lose>>
                                     -> I bow down to the pun master!
                                         Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
                                         You: So how did you aquire the title of punster?
@@ -338,6 +517,7 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                                         Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
                                         You: Me too!
                                         <i> Interesting...The song almost sounds...clearer?
+                                        <<setnpcvalue PunnyBoyNPC this 2 win>>
                                 -> You: Hmm... an arm and a peg leg??
                                     Slug: HAHA! I love it! I mean, that's not the answer I had in mind, but I like your determination!
                                     You: That means a lot coming from you. You're, like, the pun master!
@@ -351,11 +531,180 @@ Slug: Hiya! I'm Sloane, but my friends call me Slug!
                                     Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
                                     You: Me too!
                                     <i> Interesting...The song almost sounds...clearer?
+                                    <<setnpcvalue PunnyBoyNPC this 2 win>>
                                 -> You: A buccaneer!!
                                     Slug: Wait... what?? You got it? But I thought I was the master of puns... Guess there's a new punster in town...
+                                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
             -> You: No thanks.
                 Oh... okay... fine...
+                <<setnpcvalue PunnyBoyNPC this 2 lose>>
     -> That's cool!
+        Slug: Welllll... Don't you wanna hear one?
+        -> You: No thanks.
+            Slug: Oh... okay... fine...
+            <<setnpcvalue PunnyBoyNPC this 2 lose>>
+        -> You: Uh... I guess?
+            You don't have to pretend to be interested...
+            <<setnpcvalue PunnyBoyNPC this 2 lose>>
+        -> You: Sure!
+            Slug: Alright. Did you know that the tongue of a whale weighs more than an elephant?!
+            -> You: Yeah, I knew that!
+                Slug: Oh... I thought that would be a fun fact, but I guess it was just a boring fact...
+                <<setnpcvalue PunnyBoyNPC this 2 lose>>
+            -> You: No way!
+                Slug: Yes way! Also! Sea otters hold each other's paws to keep themselves from drifting off! Isn't that adorable? Oh! That reminds me! Wanna hear a joke?
+                -> You: Of course!
+                    Slug: Okay. Here it is. I got invited to a wedding at the zoo but I didn't take a plus one cuz I don’t have a significant otter.
+                    -> You: ...Haha.
+                        Slug: Oh, come on! That was funny!
+                        <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                    -> You: I've got a joke for you!
+                        Slug: &@!! yeah! I love jokes!
+                        You: Alright, here it is...
+                        -> You: I can tell you a pun about the wind, but it kinda blows…
+                            Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                            You: Oh, I guess you're right...
+                            <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                        -> You: Why aren’t dogs good dancers?
+                            Slug: Oh! I know this one! They have two left feet!
+                            -> You: Oh... I guess I'm not very good at this...
+                                Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                You: Oh, I guess you're right...
+                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                            -> You: You got it!
+                                Slug: Haha, you can't out-pun the punster!
+                                -> You: What's a punster?
+                                    Slug: Pun. Master. Punster. C'mon, keep up!
+                                    You: Oh, sorry I guess I'm just a little slower than you at words...
+                                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                                -> You: I bet I can! Give me a pun!
+                                    Slug: What did the snail say when it went to a French restaurant?
+                                    -> You: Hmm... I give up... I don't know...
+                                        Slug: Man, giving up after the first go??
+                                        I guess I'm not as good at this as I thought...
+                                        <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                                    -> You: What a way to escargot!
+                                        Slug: Hey! You're not too bad at this! You're turn!
+                                        -> You: You know, I think I'm actually all out...
+                                            Slug: Aww, really?
+                                            -> You: Yeah, I guess I'm not too good at this...
+                                                Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                                You: Oh, I guess you're right...
+                                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                                            -> You: I bow down to the pun master!
+                                                Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                                You: So how did you aquire the title of punster?
+                                                Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                                You: That's kind of unsettling...
+                                                Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                                You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                                Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                                You: Me too!
+                                                <i> Interesting...The song almost sounds...clearer?
+                                                <<setnpcvalue PunnyBoyNPC this 2 win>>
+                                        -> You: Alright. What did one ocean say to the other ocean?
+                                            Slug: Nothing! They just waved!
+                                            -> You: Actually, I was gonna say "Sea you later" but yours is better...
+                                                Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                                You: Oh, I guess you're right...
+                                                <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                                            -> You: Man you're good at this!
+                                                Slug: Okay, okay. One last one. How much money does a pirate pay for corn?
+                                                    -> You: I can't even guess this one. I'm all punned out...
+                                                        Slug: Aww, really?
+                                                        -> You: Yeah, I guess I'm not too good at this...
+                                                            Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                                            You: Oh, I guess you're right...
+                                                            <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                                                        -> You: I bow down to the pun master!
+                                                            Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                                            You: So how did you aquire the title of punster?
+                                                            Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                                            You: That's kind of unsettling...
+                                                            Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                                            You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                                            Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                                            You: Me too!
+                                                            <i> Interesting...The song almost sounds...clearer?
+                                                            <<setnpcvalue PunnyBoyNPC this 2 win>>
+                                                    -> You: Hmm... an arm and a peg leg??
+                                                        Slug: HAHA! I love it! I mean, that's not the answer I had in mind, but I like your determination!
+                                                        -> That means a lot coming from you. You're, like, the pun master!
+                                                            Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                                            You: So how did you aquire the title of punster?
+                                                            Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                                            You: That's kind of unsettling...
+                                                            Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                                            You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                                            Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                                            You: Me too!
+                                                            <i> Interesting...The song almost sounds...clearer?
+                                                            <<setnpcvalue PunnyBoyNPC this 2 win>>
+                                                    -> You: A buccaneer!!
+                                                        Slug: Wait... what?? You got it? But I thought I was the master of puns... Guess there's a new punster in town...
+                                                        <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                        -> You: Uhh... I actually can't think of one...
+                            Slug: Hey! You're not too bad at this! You're turn!
+                            -> You: You know, I think I'm actually all out...
+                                Slug: Aww, really?
+                                -> You: Yeah, I guess I'm not too good at this...
+                                    Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                    You: Oh, I guess you're right...
+                                    <<setnpcvalue PunnyBoyNPC this 2 lose>>
+                                -> You: I bow down to the pun master!
+                                    Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                    You: So how did you aquire the title of punster?
+                                    Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                    You: That's kind of unsettling...
+                                    Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                    You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                    Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                    You: Me too!
+                                    <i> Interesting...The song almost sounds...clearer?
+                                    <setnpcvalue PunnyBoyNPC this 2 win>>
+                            -> You: Alright. What did one ocean say to the other ocean?
+                                Slug: Nothing! They just waved!
+                                -> You: Actually, I was gonna say "Sea you later" but yours is better...
+                                    Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                    You: Oh, I guess you're right...
+                                    <setnpcvalue PunnyBoyNPC this 2 lose>>
+                                -> You: Man you're good at this!
+                                    Slug: Okay, okay. One last one. How much money does a pirate pay for corn?
+                                    -> You: I can't even guess this one. I'm all punned out...
+                                        Slug: Aww, really?
+                                        -> You: Yeah, I guess I'm not too good at this...
+                                            Slug: Aw, you shouldn't put yourself down, even if you're joking about it.
+                                            You: Oh, I guess you're right...
+                                            <setnpcvalue PunnyBoyNPC this 2 lose>>
+                                        -> You: I bow down to the pun master!
+                                            Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                            You: So how did you aquire the title of punster?
+                                            Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                            You: That's kind of unsettling...
+                                            Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                            You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                            Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                            You: Me too!
+                                            <i> Interesting...The song almost sounds...clearer?
+                                            <setnpcvalue PunnyBoyNPC this 2 win>>
+                                    -> You: Hmm... an arm and a peg leg??
+                                        Slug: HAHA! I love it! I mean, that's not the answer I had in mind, but I like your determination!
+                                        -> That means a lot coming from you. You're, like, the pun master!
+                                            Slug: Hehe! You mean the punster! Get it? Pun? Master? Punster?
+                                            You: So how did you aquire the title of punster?
+                                            Slug: Well, if I'm being honest, somtimes I get a little anxious at parties... I used to be scared of people laughing at me for doing something stupid. But the best way to get over that is to get used to people laughing around you! So I memorized a bunch of jokes! When that doesn't work and I can't think of anything to say I'll pull out some fun facts... Did you know starfish don't have brains, but the Easter Island heads have bodies??
+                                            You: That's kind of unsettling...
+                                            Slug: Right? Talking about silly things makes me feel more comfy! Is there anything you like talking about that makes you feel better?
+                                            You: I really like music! Actually, I've been trying to figure out what this song is called...
+                                            Slug: I don't know what it's called, but I know that it talks about BELONGING... I like it.
+                                            You: Me too!
+                                            <i> Interesting...The song almost sounds...clearer?
+                                            <setnpcvalue PunnyBoyNPC this 2 win>>
+                                    -> You: A buccaneer!!
+                                        Slug: Wait... what?? You got it? But I thought I was the master of puns... Guess there's a new punster in town...
+                                        <setnpcvalue PunnyBoyNPC this 2 lose>>
+                -> You: No thanks.
+                    Oh... okay... fine...
 ===
 
 title: BathroomFirst
@@ -368,7 +717,7 @@ title: BathroomFirst
 <i> Is that better or worse than people knowing that you’re pacing? 
 <i> Can they hear the sound each sticky shoe leaves as it fights against old beer and traces of mud?
 “Hey! I really need to piss and I think someone’s taking a shower in the other bathroom! Could you hurry it up in there?”
-<i> Who the fuck takes a shower at a party?
+<i> Who the &*@! takes a shower at a party?
 <i> Alright.
 <i> One more deep breath.
 <i> That didn’t help. But the slight thump of the music on the other side of the door does. 
@@ -382,14 +731,14 @@ title: BathroomSecond
 ---
 <<incrementbathvalue this>>
 <i> This is definitely not where you were trying to get to. 
-<i> You opened the door to leave and stepped outside… So why the fuck are you standing in the bathroom?
+<i> You opened the door to leave and stepped outside… So why the &*@! are you standing in the bathroom?
 <i> Your phone screen lights up as you take it out of your pocket. 
 <i> Wait, what? 
 <i> It’s eleven… How is that possible?! 
 
 “Hey! I really need to piss and I think someone’s taking a shower in the other bathroom! Could you hurry it up in there?”
 
-<i> Unless that person is taking a really long shower, you’re pretty sure there’s some sort of Groundhog’s Day shit going on. 
+<i> Unless that person is taking a really long shower, you’re pretty sure there’s some sort of Groundhog’s Day $*?% going on. 
 <i> Your breaths become ragged and you start to pace again. 
 <i> Same sticky feeling. 
 <i> Same fucking party that you thought you tried to leave a few minutes ago… or a few minutes in the future? 
@@ -401,7 +750,7 @@ title: BathroomSecond
 
 title: BathroomThird
 ---
-<i> Shit! Not back here again! 
+<i> $*?%! Not back here again! 
 <i> You look at your phone even though you know what time it’s gonna show you. Eleven. 
 <i> You’re getting really tired of the alcohol-covered bathroom tiles.
 “Hey! I really need to piss and I think someone’s taking a shower in the other bathroom! Could you hurry it up in there?”
@@ -461,6 +810,7 @@ title: GoOutside
     <<resetscene OutsideDoor this>>
     <<setnpcvalue OutsideDoor this 3 looped>>
     <<setnpcvalue PunnyBoyNPC this 2 looped>>
+    <<setnpcvalue PartyJockNPC this 1 looped>>
 
 -> No
 ===
