@@ -10846,6 +10846,10 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8249724284507358549, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLoop
+      value: MomFirst
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249724284507358549, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: blackPanel
       value: 
       objectReference: {fileID: 129263034}
