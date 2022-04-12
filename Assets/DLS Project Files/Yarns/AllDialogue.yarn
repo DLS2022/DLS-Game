@@ -2,52 +2,52 @@
 tags:
 ---
 You: Hey… Uh, how are you liking the party?
-Jock: Dude, I’ve been raging since Thursday and I’ll keep goin until the booze dries up… or I do! 
+Chad: Dude, I’ve been raging since Thursday and I’ll keep goin until the booze dries up… or I do! 
 You: So… you’re still having fun? Or does the energy plummet after the third time?
-Jock: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this new drink I’ve created. I call it the Sugar Blast! It’s two shots of tequila, a handful of skittles, whipped cream and… some other stuff I think. 
+Chad: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this new drink I’ve created. I call it the Sugar Blast! It’s two shots of tequila, a handful of skittles, whipped cream and… some other stuff I think. 
 -> You: That sounds disgusting! 
-    Jock: You're no fun.
+    Chad: You're no fun.
     <<setnpcvalue PartyJockNPC this 0 lose>>
 -> You: I think I'll stick to water for now. 
-    Jock: For sure, gotta pace yourself.
-    Jock: So how are you enjoying the party?
+    Chad: For sure, gotta pace yourself.
+    Chad: So how are you enjoying the party?
     -> You: I'm a bit anxious.
-        Jock: Damn, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
+        Chad: Damn, that sucks. Sometimes I get anxious too. Is there anything that helps you with that?
         ->You: Not really...
-            Jock: Oh, sorry...
+            Chad: Oh, sorry...
             <<setnpcvalue PartyJockNPC this 0 lose>> 
         ->You: Being away from people in a quiet place.
-            Jock: Oh, I can leave you alone if you want...
+            Chad: Oh, I can leave you alone if you want...
             <<setnpcvalue PartyJockNPC this 0 lose>> 
         ->You: Music helps me calm down.
-            Jock: Me too! It helps to sing what I’m feeling. I’m pretty fucking drunk!
+            Chad: Me too! It helps to sing what I’m feeling. I’m pretty fucking drunk!
             You: This song slaps!
-            Jock: Yeah! It’s got a good beat!
+            Chad: Yeah! It’s got a good beat!
             You: I’ve been trying to figure out what it’s called.
             <<setfoundwords MusicWordsFoundUI this SOMEWHERE 2>>
-            Jock:  Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
+            Chad:  Hmm, I don’t know the name, but I'm sure I've heard it SOMEWHERE. Maybe at a different party... When I had a slightly fuzzier memory... Well, I’ll see you around. Gotta take these sweet moves over to the dance floor!
     -> You: It's alright...
         <<setnpcvalue PartyJockNPC this 0 lose>> 
 -> You: Sure, I'll at least try a sip. 
-    Jock: &@! yeah! Let's party. 
-    Jock: So whatcha think? Want me to make another? 
+    Chad: &@! yeah! Let's party. 
+    Chad: So whatcha think? Want me to make another? 
     -> You: I think if I have one more, I might go into a coma. 
-        Jock: For sure, gotta pace yourself.
+        Chad: For sure, gotta pace yourself.
     -> You: Uhh, sure... Keep 'em coming. 
-        Jock: You okay? Your face is turning a line-skittle color. 
+        Chad: You okay? Your face is turning a line-skittle color. 
         You: I don't feel so good. I'm gonna walk home. 
-        Jock: Oh, uh, alright dude.
+        Chad: Oh, uh, alright dude.
         <<setnpcvalue PartyJockNPC this 0 lose>> 
 ===
 
 title: JockLose
 ---
-Jock: Man, I’m a bit bummed now… Gotta get the good vibes back
+Chad: Man, I’m a bit bummed now… Gotta get the good vibes back
 ===
 
 title: JockWin
 ---
-Jock: You’re the bomb, dude!
+Chad: You’re the bomb, dude!
 ===
 
 title: MomFirst

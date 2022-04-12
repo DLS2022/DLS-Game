@@ -27,18 +27,44 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {   
-        if (instance != null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else 
-        {
+        // if (instance != null)
+        // {
+        //     instance = this;
+        //     // DontDestroyOnLoad(gameObject);
+        // }
+        // else 
+        // {
            
-           //Destroy(gameObject);
+        //    Destroy(gameObject);
 
-        }
+        // }
 
+        // instance = this;
+        // DontDestroyOnLoad(instance);
+
+        // if (instance != null && instance != this)
+        //     Destroy(this);
+
+        if (instance == null) {
+        //First run, set the instance
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+ 
+    } else if (instance != this) {
+        //Instance is not the same as the one we have, destroy old one, and reset to newest one
+        Destroy(instance.gameObject);
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+        // if (instance != null)
+        // {
+        //     Destroy(gameObject);
+        //     return;
+        // }
+
+        // instance = this;
+        // DontDestroyOnLoad(gameObject);
 
 
     }
