@@ -56,17 +56,17 @@ public class Interaction : MonoBehaviour
         //     CurrConvo = ConvoWin;
         // }
 
-        // if(GlobalVariables.NPCDialogueValue[NPCValue] == 1)
-        // {
-        //     if(GlobalVariables.GameHasLooped)
-        //     {
-        //         GlobalVariables.NPCDialogueValue[NPCValue] = 3;
-        //     }
-        //     else
-        //     {
-        //         GlobalVariables.NPCDialogueValue[NPCValue] = 0;
-        //     }
-        // }
+         if(GlobalVariables.NPCDialogueValue[NPCValue] == 1)
+         {
+             if(GlobalVariables.GameHasLooped)
+             {
+                 GlobalVariables.NPCDialogueValue[NPCValue] = 3;
+             }
+             else
+             {
+                 GlobalVariables.NPCDialogueValue[NPCValue] = 0;
+             }
+         }
 
         // Debug.Log("GameHasLooped is " + GlobalVariables.GameHasLooped);
         // if(GlobalVariables.GameHasLooped)
