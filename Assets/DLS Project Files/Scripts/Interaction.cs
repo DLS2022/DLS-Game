@@ -37,6 +37,9 @@ public class Interaction : MonoBehaviour
     public FirstPersonController fpcscript;
     public bool RestrictMovement;
 
+    //public ContinueActionType continueActionType = ContinueActionType.KeyCode;
+    //public KeyCode continueActionKeyCode = KeyCode.Space;
+
     public Animator FadeAnimation;
 
     PauseGame pause;
@@ -98,7 +101,7 @@ public class Interaction : MonoBehaviour
     {
         if (canInteract)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && !diaRunner.IsDialogueRunning)
+            if (Input.GetKeyDown(KeyCode.Space)) //&& !diaRunner.IsDialogueRunning)
             {
                 spaceBarImage.SetActive(false);
 
