@@ -21,7 +21,7 @@ Chad: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
             <<setnpcvalue PartyJockNPC this 0 lose>> 
         ->You: Music helps me calm down.
             Chad: Me too! It helps to sing what I’m feeling. 
-            Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] I’m pretty fucking drunk! 
+            Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] <i>I’m pretty fucking drunk!</i> 
             You: Have you been listening to the music playing? I really like this song.
             Chad: Yeah! This beat slaps!
             You: I’ve been trying to figure out what it’s called.
@@ -64,7 +64,7 @@ Chad: Heck yeah! Hey, how did ya know what they were called?
                     <<setnpcvalue PartyJockNPC this 0 lose>> 
                 ->You: Music helps me calm down.
                     Chad: Me too! It helps to sing what I’m feeling. 
-                    Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] I’m pretty fucking drunk! 
+                    Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] <i>I’m pretty fucking drunk!</i>
                     You: Have you been listening to the music playing? I really like this song.
                     Chad: Yeah! This beat slaps!
                     You: I’ve been trying to figure out what it’s called.
