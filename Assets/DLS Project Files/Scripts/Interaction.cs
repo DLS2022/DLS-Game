@@ -101,7 +101,7 @@ public class Interaction : MonoBehaviour
     {
         if (canInteract)
         {
-            if (Input.GetKeyDown(KeyCode.Space)) //&& !diaRunner.IsDialogueRunning)
+            if (Input.GetKeyDown(KeyCode.Space) && !diaRunner.IsDialogueRunning)
             {
                 spaceBarImage.SetActive(false);
 

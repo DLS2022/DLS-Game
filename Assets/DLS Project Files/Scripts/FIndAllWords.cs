@@ -44,12 +44,12 @@ public class FIndAllWords : MonoBehaviour
             StartCoroutine(StartEnding());
         }
 
-        if(Input.GetKeyDown(KeyCode.T))
+       /* if(Input.GetKeyDown(KeyCode.T))
         {
             GlobalVariables.AllFoundWords[0] = true;
             GlobalVariables.AllFoundWords[1] = true;
             GlobalVariables.AllFoundWords[2] = true;
-        }
+        }*/
 
     }
 

@@ -65,7 +65,7 @@ public class BathroomDialogueStartup : MonoBehaviour
             interaction.RestrictMovement = false;
         }
 
-        TesterControls();
+        //TesterControls();
         
     }
 
@@ -74,7 +74,7 @@ public class BathroomDialogueStartup : MonoBehaviour
     //     diaRunner.StartDialogue(talktonode);
     // }
 
-    public void TesterControls()
+ /*   public void TesterControls()
     {
         if(Input.GetKeyDown(KeyCode.F1))
         {
@@ -90,5 +90,5 @@ public class BathroomDialogueStartup : MonoBehaviour
         {
             GlobalVariables.BathroomDialogueValue++;
         }
-    }
+    }*/
 }
