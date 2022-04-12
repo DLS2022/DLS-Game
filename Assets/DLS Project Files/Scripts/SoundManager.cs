@@ -50,11 +50,11 @@ public class SoundManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
  
-    } else if (instance != this) {
+    } else if (instance != null && instance != this) {
         //Instance is not the same as the one we have, destroy old one, and reset to newest one
-        Destroy(instance.gameObject);
-        instance = this;
-        DontDestroyOnLoad(gameObject);
+        Destroy(gameObject);
+        // instance = this;
+        // DontDestroyOnLoad(gameObject);
     }
 
         // if (instance != null)
