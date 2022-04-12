@@ -21,7 +21,7 @@ Chad: Nah, I’m havin a blast! Oh! Speaking of which, you’ve gotta try this n
             <<setnpcvalue PartyJockNPC this 0 lose>> 
         ->You: Music helps me calm down.
             Chad: Me too! It helps to sing what I’m feeling. 
-            Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] <i>I’m pretty fucking drunk!</i> 
+            Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] <i>I’m pretty &*@!ing drunk!</i> 
             You: Have you been listening to the music playing? I really like this song.
             Chad: Yeah! This beat slaps!
             You: I’ve been trying to figure out what it’s called.
@@ -64,7 +64,7 @@ Chad: Heck yeah! Hey, how did ya know what they were called?
                     <<setnpcvalue PartyJockNPC this 0 lose>> 
                 ->You: Music helps me calm down.
                     Chad: Me too! It helps to sing what I’m feeling. 
-                    Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] <i>I’m pretty fucking drunk!</i>
+                    Chad: [nomarkup]*[/nomarkup]singing[nomarkup]*[/nomarkup] <i>I’m pretty &*@!ing drunk!</i>
                     You: Have you been listening to the music playing? I really like this song.
                     Chad: Yeah! This beat slaps!
                     You: I’ve been trying to figure out what it’s called.
@@ -741,7 +741,7 @@ title: BathroomSecond
 <i> Unless that person is taking a really long shower, you’re pretty sure there’s some sort of Groundhog’s Day $*?% going on. 
 <i> Your breaths become ragged and you start to pace again. 
 <i> Same sticky feeling. 
-<i> Same fucking party that you thought you tried to leave a few minutes ago… or a few minutes in the future? 
+<i> Same &*@!ing party that you thought you tried to leave a few minutes ago… or a few minutes in the future? 
 <i> Your brain hurts. Here comes the start of that same song. Can a song be considered stuck in your head when it’s been playing the whole time? 
 <i> Your mom always said to get something out of your head, you had to listen to the whole thing. 
 <i> There’s something about this song… Somehow you know that if you have this song everything else will fall into place…
