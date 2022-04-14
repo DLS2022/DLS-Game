@@ -7281,7 +7281,7 @@ MonoBehaviour:
   sound: {fileID: 1407746259}
   chadAudio: {fileID: 1513212489}
   didiAudio: {fileID: 1852104119}
-  slugAudio: {fileID: 1852104119}
+  slugAudio: {fileID: 1940965196}
   doorOpen: {fileID: 8300000, guid: eaad3b61ef3457744970019d0608464e, type: 3}
   doorOpen2: {fileID: 8300000, guid: b8c9f4dba04aea34e8cb25fd54bb5cf7, type: 3}
   doorRattle: {fileID: 8300000, guid: 89793dffda891674f8dadf9c2b9ef96a, type: 3}
