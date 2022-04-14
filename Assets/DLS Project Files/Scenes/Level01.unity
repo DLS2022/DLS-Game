@@ -10410,6 +10410,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLoop
+      value: BathroomDoorLocked
+      objectReference: {fileID: 0}
+    - target: {fileID: 983247124, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: ConvoLose
       value: BathroomDoorLocked
       objectReference: {fileID: 0}
@@ -10864,6 +10868,10 @@ PrefabInstance:
     - target: {fileID: 8249724284507358551, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: m_TagString
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249724284915284397, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
+      propertyPath: ConvoLoop
+      value: JockLoop
       objectReference: {fileID: 0}
     - target: {fileID: 8249724284915284397, guid: c7fb105b14cef9343bdb934a48baf647, type: 3}
       propertyPath: blackPanel
